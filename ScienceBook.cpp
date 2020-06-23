@@ -18,4 +18,4 @@ ScienceBook::ScienceBook(
                 price,
                 author,
                 pubHouse)
-                {}
+ {}
