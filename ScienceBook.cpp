@@ -5,6 +5,7 @@ using namespace std;
 #include "ScienceBook.h"
 
 ScienceBook::ScienceBook(
+  //                  int type,
 	                int number, 
 	                string name, 
 	                double price, 

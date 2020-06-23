@@ -11,6 +11,7 @@ private:
 
 protected:
     int _type = 0;
+
 public:
     Books(int type, int number, string name, double price, string author, string pubHouse);
     int GetType() { return _type; }
