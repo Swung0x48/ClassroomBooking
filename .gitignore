@@ -1,2 +1,8 @@
 # Project exclude paths
 /cmake-build-debug/
+/.vs
+/Debug
+/out/build/x64-Debug (默认值)/CMakeFiles
+/out/build/x64-Debug (默认值)/Testing/Temporary
+/x64/Debug
+/out/build/x64-Debug (默认值)

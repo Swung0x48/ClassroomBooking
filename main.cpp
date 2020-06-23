@@ -8,6 +8,6 @@ int main()
     {
         cout << "Invaild Menu!" << endl;
     }
-
+    cout << endl;
     return 0;
 }
