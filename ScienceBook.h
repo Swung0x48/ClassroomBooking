@@ -7,6 +7,7 @@ class ScienceBook: public Books {
 
 public:
 	ScienceBook( int number, string name, double price, string author, string pubHouse);
+
 	int GetType() { return _type; }
 };
 

@@ -17,4 +17,5 @@ ScienceBook::ScienceBook(
                 name,
                 price,
                 author,
-                pubHouse) {}
+                pubHouse)
+                {}
