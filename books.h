@@ -11,13 +11,13 @@ private:
 	string _pubhouse;  //出版社
 	 
 public:
-	books(int _t, int _num, string _nam, double _pri, string _aut, string _pubh);  //构造函数
-	int get_type();        //得到图书类型
-	int get_number( );       //得到图书编号
-	string get_name( );      //得到名称
-	double get_price( );     //得到价格
-	string get_author( );    //得到作者
-	string get_pubhouse( );  //得到出版社
+	books( int number, string name, double price, string author, string pubhouse);  //构造函数
+	int GetType() { 	return _type;  }
+	int GetNumber() {  return _number;  }
+	string GetName() { 	return _name;  }
+	double GetPrice() { 	return _price;  }
+	string GetAuthor() { 	return _author;  }
+	string GetPubhouse() {  return _pubhouse;  }
 //	virtual operator>>( ) = 0;  //TODO: 定义
 };
 

@@ -6,8 +6,9 @@
 class sciencebook: public books {
 
 public:
-	sciencebook(int _type, int _num, string _nam, double _pri, string _aut, string _pubh) : books(_num, _nam, _pri, _aut, _pubh) {
-		_type = 1;
+	sciencebook(int type, int number, string name, double price, string author, string pubhouse);
+	int GetType() {  //得到图书类型
+		return _type;
 	}
 };
 

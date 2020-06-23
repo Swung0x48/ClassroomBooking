@@ -4,7 +4,19 @@ using namespace std;
 #include "books.h"
 #include "sciencebook.h"
 
-sciencebook::sciencebook(int _num, string _nam, double _pri, string _aut, string _pubh , int _type):books(_num, _nam, _pri, _aut, _pubh) {// :books(_num, _nam, _pri, _aut, _pubh)
+sciencebook::sciencebook(
+	                int type, 
+	                int number, 
+	                string name, 
+	                double price, 
+	                string author, 
+	                string pubhouse):
+	     books(
+			 number, 
+			 name, 
+			 price,
+			 author,
+			 pubhouse) {
 	_type = 1;
 
 }
