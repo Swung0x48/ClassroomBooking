@@ -1,10 +1,5 @@
 #include <iostream>
 #include "Vars.h"
-#include "books.h"
-#include "sciencebook.h"
-
-sciencebook ScienceBook;
-
 int main()
 {
     Vars Vars;
@@ -12,6 +7,6 @@ int main()
     {
         cout << "Invaild Menu!" << endl;
     }
-    cout << ScienceBook.get_type() << endl;
+
     return 0;
 }

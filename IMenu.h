@@ -9,7 +9,7 @@
 class IMenu
 {
 protected:
-    int _option;
+    int _option = 0;
 public:
     virtual void Run() = 0;
     virtual bool IsSelected(int input);

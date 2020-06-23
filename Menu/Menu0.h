@@ -12,6 +12,7 @@ using namespace std;
 class Menu0: public IMenu
 {
 private:
+    int _option = 0;
 public:
     virtual void Run();
 };
