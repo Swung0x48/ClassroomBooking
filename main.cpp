@@ -14,6 +14,5 @@ int main()
         cout << "Invaild Menu!" << endl;
     }
     cout << scienceBook.GetType() << endl;
-    cout << endl;
     return 0;
 }
