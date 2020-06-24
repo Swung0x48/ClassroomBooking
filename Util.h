@@ -2,13 +2,13 @@
 // Created by Swung 0x48 on 2020/6/24.
 //
 
-#ifndef LIBRARYMANAGER_RANDGEN_H
-#define LIBRARYMANAGER_RANDGEN_H
+#ifndef LIBRARYMANAGER_UTIL_H
+#define LIBRARYMANAGER_UTIL_H
 
 #include <random>
 using namespace std;
 
-class randGen
+class Util
 {
 private:
     static default_random_engine randEngine;
@@ -16,4 +16,4 @@ public:
     static int getRandom() { return randEngine(); }
 };
 
-#endif //LIBRARYMANAGER_RANDGEN_H
+#endif //LIBRARYMANAGER_UTIL_H
