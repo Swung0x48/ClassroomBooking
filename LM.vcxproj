@@ -98,16 +98,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Books.cpp" />
-    <ClCompile Include="ForeignBook.cpp" />
+    <ClCompile Include="Books\Books.cpp" />
+    <ClCompile Include="Books\ForeignBook.cpp" />
+    <ClCompile Include="Books\ScienceBook.cpp" />
+    <ClCompile Include="Books\SocialBook.cpp" />
     <ClCompile Include="IMenu.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MenuRouter.cpp" />
     <ClCompile Include="menu\Menu0.cpp" />
-    <ClCompile Include="randGen.cpp" />
-    <ClCompile Include="ScienceBook.cpp" />
-    <ClCompile Include="SocialBook.cpp" />
     <ClCompile Include="User.cpp" />
+    <ClCompile Include="Util.cpp" />
     <ClCompile Include="Vars.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -121,6 +121,7 @@
     <ClInclude Include="ScienceBook.h" />
     <ClInclude Include="SocialBook.h" />
     <ClInclude Include="User.h" />
+    <ClInclude Include="Util.h" />
     <ClInclude Include="Vars.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
