@@ -107,6 +107,7 @@
     <ClCompile Include="randGen.cpp" />
     <ClCompile Include="ScienceBook.cpp" />
     <ClCompile Include="SocialBook.cpp" />
+    <ClCompile Include="User.cpp" />
     <ClCompile Include="Vars.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -119,6 +120,7 @@
     <ClInclude Include="randGen.h" />
     <ClInclude Include="ScienceBook.h" />
     <ClInclude Include="SocialBook.h" />
+    <ClInclude Include="User.h" />
     <ClInclude Include="Vars.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

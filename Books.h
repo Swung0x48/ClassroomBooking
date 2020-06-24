@@ -26,8 +26,6 @@ public:
     double GetPrice() { return _price; };
     string GetAuthor() { return _author; };
     string GetPubHouse() { return _pubHouse; };
-    friend ifstream& operator>> (ifstream& input, int inputInt);
-    friend ifstream& operator<< (ofstream& output, int outputInt);
     friend ifstream& operator>> (ifstream& input, Books& b);
     friend ofstream& operator<< (ofstream& output, Books& b);
 

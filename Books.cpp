@@ -14,14 +14,6 @@ Books::Books(int type, int number, string name, double price, string author, str
         _pubHouse(pubHouse)
 {}
 
-
-
-ofstream& operator<< (ofstream& output, int outputInt)
-{
-    ofstream ofs;
-    ofs << outputInt;
-}
-
 ifstream& operator>> (ifstream& input, Books& b) {
     input >> b._type
         >> b._number
@@ -33,8 +25,8 @@ ifstream& operator>> (ifstream& input, Books& b) {
 }
 
 ofstream& operator<< (ofstream& output, Books& b) {
-    output << b._type
-        << " "
+    output << b._type 
+        << string(" ")
         << b._number
         << " "
         << quoted(b._name)

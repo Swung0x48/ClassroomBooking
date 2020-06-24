@@ -3,5 +3,6 @@
 //
 
 #include "randGen.h"
+#include <ctime>
 
 default_random_engine randGen::randEngine(time(nullptr));
