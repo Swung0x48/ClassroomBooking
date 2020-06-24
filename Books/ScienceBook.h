@@ -2,9 +2,9 @@
 #ifndef SCIENCEBOOK_H
 #define SCIENCEBOOK_H
 
-#include "Books.h"
+#include "Book.h"
 
-class ScienceBook: public Books
+class ScienceBook: public Book
 {
 public:
 	ScienceBook( int number, string name, double price, string author, string pubHouse);

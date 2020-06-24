@@ -2,9 +2,9 @@
 #ifndef SOCIALBOOK_H
 #define SOCIALBOOK_H
 
-#include "Books.h"
+#include "Book.h"
 class SocialBook :
-    public Books
+    public Book
 {
 public:
 	SocialBook(int number, string name, double price, string author, string pubHouse);

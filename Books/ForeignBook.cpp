@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-#include "Books.h"
+#include "Book.h"
 #include "ForeignBook.h"
 
 
@@ -13,7 +13,7 @@ ForeignBook::ForeignBook(
     string author,
     string pubHouse,
     string language) :
-    Books(
+        Book(
         3,
         number,
         name,

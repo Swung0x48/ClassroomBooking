@@ -19,7 +19,7 @@ int main()
     File file;
 
     file.Open(File::BookPath, "wa") << scienceBook;
-    file.Open(File::BookPath, "wa") << scienceBook;
+    file.Open(File::BookPath, "wa") << scienceBook << scienceBook << scienceBook;
     file.Close();   // remember to close stream before mode change!!
     file.Open(File::BookPath, "r") >> scienceBook;
     file.Close();

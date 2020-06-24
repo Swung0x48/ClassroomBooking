@@ -7,7 +7,7 @@ using namespace std;
 using std::ifstream;
 using std::ofstream;*/
 
-class Books {
+class Book {
 protected:
     int _number;
     string _name;
@@ -19,16 +19,16 @@ protected:
     int _type = 0;
 
 public:
-    Books(int type, int number, string name, double price, string author, string pubHouse);
-    Books();
+    Book(int type, int number, string name, double price, string author, string pubHouse);
+    Book();
     int GetType() { return _type; }
     int GetNumber() { return _number; }
     string GetName() { return _name; };
     double GetPrice() { return _price; };
     string GetAuthor() { return _author; };
     string GetPubHouse() { return _pubHouse; };
-    friend istream& operator>> (istream& input, Books& b);
-    friend ostream& operator<< (ostream& output, Books& b);
+    friend istream& operator>> (istream& input, Book& b);
+    friend ostream& operator<< (ostream& output, Book& b);
 
 };
 

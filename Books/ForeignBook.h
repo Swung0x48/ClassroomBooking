@@ -2,9 +2,9 @@
 #ifndef FOREIGNBOOK_H
 #define FOREIGNBOOK_H
 
-#include "Books.h"
+#include "Book.h"
 class ForeignBook :
-    public Books
+    public Book
 {
 private:
     string _language;

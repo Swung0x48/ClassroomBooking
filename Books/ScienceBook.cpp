@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-#include "Books.h"
+#include "Book.h"
 #include "ScienceBook.h"
 
 ScienceBook::ScienceBook(
@@ -11,7 +11,7 @@ ScienceBook::ScienceBook(
 	                double price, 
 	                string author, 
 	                string pubHouse):
-        Books(
+        Book(
                 1,
                 number,
                 name,

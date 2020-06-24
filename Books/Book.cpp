@@ -3,9 +3,9 @@
 #include <string>
 using namespace std;
 
-#include "Books.h"
+#include "Book.h"
 
-Books::Books(int type, int number, string name, double price, string author, string pubHouse):
+Book::Book(int type, int number, string name, double price, string author, string pubHouse):
         _type(type),
         _number(number),
         _name(name),
@@ -14,7 +14,7 @@ Books::Books(int type, int number, string name, double price, string author, str
         _pubHouse(pubHouse)
 {}
 
-Books::Books():
+Book::Book():
         _type(-1),
         _price(0),
         _number(-1),
@@ -23,7 +23,7 @@ Books::Books():
         _pubHouse("")
 {}
 
-istream& operator>> (istream& input, Books& b)
+istream& operator>> (istream& input, Book& b)
 {
     int type;
     int number;
@@ -39,12 +39,12 @@ istream& operator>> (istream& input, Books& b)
           >> quoted(author)
           >> quoted(pubHouse);
 
-    b = Books(type, number, name, price, author, pubHouse);
+    b = Book(type, number, name, price, author, pubHouse);
 
     return input;
 }
 
-ostream& operator<< (ostream& output, Books& b)
+ostream& operator<< (ostream& output, Book& b)
 {
     output << b._type
         << " "
