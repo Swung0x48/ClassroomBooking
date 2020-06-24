@@ -3,6 +3,7 @@
 #include "Books/ScienceBook.h"
 #include "Books/SocialBook.h"
 #include "Util/Util.h"
+#include "Util/File.h"
 #include <iomanip>
 using namespace std;
 
@@ -15,10 +16,15 @@ int main()
 
      ScienceBook scienceBook(1, "name", 20, "Tom", "A");
 //    SocialBook socialBook(2, "name", 20, "Tom", "A");
+    File file;
 
-  /*  Books a;
-    cin >> a;
-    cout << a;*/
+    file.Open(File::BookPath, 'w') << scienceBook;
+    file.Close();
+    file.Open(File::BookPath, 'r') >> scienceBook;
+    file.Close();
+
+    cout << scienceBook << endl;
+    cout << scienceBook.GetName() << endl;
 
     Vars vars;
     if (!vars.menuRouter.EnterMenu(0))

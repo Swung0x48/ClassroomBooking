@@ -8,7 +8,7 @@ using std::ifstream;
 using std::ofstream;*/
 
 class Books {
-private:
+protected:
     int _number;
     string _name;
     double _price;
