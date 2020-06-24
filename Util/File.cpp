@@ -1,0 +1,23 @@
+//
+// Created by Swung 0x48 on 2020/6/24.
+//
+
+#include "File.h"
+
+string File::BookPath = "book.txt";
+string File::UserPath = "user.txt";
+string File::LogPath = "log.txt";
+
+fstream& File::Open(const string& path, char mode)
+{
+    if (mode == 'r')
+        _fs.open(path, ios::in);
+    else if (mode == 'w')
+        _fs.open(path, ios::out | ios::trunc);
+    return _fs;
+}
+
+void File::Close()
+{
+    _fs.close();
+}
