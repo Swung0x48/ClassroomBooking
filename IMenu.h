@@ -2,8 +2,8 @@
 // Created by Swung 0x48 on 2020/6/22.
 //
 
-#ifndef CLASSROOMBOOKING_IMENU_H
-#define CLASSROOMBOOKING_IMENU_H
+#ifndef IMENU_H
+#define IMENU_H
 
 
 class IMenu
@@ -17,4 +17,4 @@ public:
 };
 
 
-#endif //CLASSROOMBOOKING_IMENU_H
+#endif //IMENU_H

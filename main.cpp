@@ -13,7 +13,7 @@ int main()
     cin >> quoted(a) >> quoted(b);
     cout << quoted(a) << "/" << quoted(b);*/
 
-//    ScienceBook scienceBook(1, "name", 20, "Tom", "A");
+     ScienceBook scienceBook(1, "name", 20, "Tom", "A");
 //    SocialBook socialBook(2, "name", 20, "Tom", "A");
 
   /*  Books a;
@@ -25,7 +25,7 @@ int main()
     {
         cout << "Invaild Menu!" << endl;
     }
-//    cout << scienceBook.GetType() << endl;
+    cout << scienceBook.GetType() << endl;
 //    cout << socialBook.GetType() << endl;
 //    cout << Util::getRandom() << endl;
     return 0;

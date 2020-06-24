@@ -12,7 +12,7 @@ private:
 public:
     ForeignBook(int number, string name, double price, string author, string pubHouse, string language );
 
-    int GetType() { return _type; }
+  //  int GetType() { return _type; }
 };
 
 #endif   //FOREIGNBOOK_H
