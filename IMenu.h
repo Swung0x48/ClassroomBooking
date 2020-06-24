@@ -9,10 +9,11 @@
 class IMenu
 {
 protected:
-    int _option = 0;
+    int _option = -1;
 public:
     virtual void Run() = 0;
     virtual bool IsSelected(int input);
+    virtual int GetOption() { return _option; }
     virtual ~IMenu();
 };
 

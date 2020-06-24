@@ -6,7 +6,7 @@
 
 bool IMenu::IsSelected(int input)
 {
-    return input == _option;
+    return input == GetOption();
 }
 
 IMenu::~IMenu()
