@@ -5,7 +5,7 @@
 #ifndef CLASSROOMBOOKING_MENU1_H
 #define CLASSROOMBOOKING_MENU1_H
 
-#include "IMenu.h"
+#include "../IMenu.h"
 #include <iostream>
 using namespace std;
 
