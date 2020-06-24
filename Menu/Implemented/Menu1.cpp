@@ -1,4 +1,4 @@
-#include "Menu1.h"
+#include "../Menu1.h"
 
 void Menu1::Run()
 {
