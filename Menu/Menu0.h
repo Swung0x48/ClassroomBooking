@@ -11,9 +11,10 @@ using namespace std;
 
 class Menu0: public IMenu
 {
-private:
+protected:
     int _option = 0;
 public:
+    virtual int GetOption() { return _option; }
     virtual void Run();
 };
 
