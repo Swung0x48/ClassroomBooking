@@ -1,8 +1,8 @@
 #include <iostream>
 #include "Vars.h"
-#include "Books.h"
 #include "ScienceBook.h"
 #include "SocialBook.h"
+#include "randGen.h"
 #include <iostream>
 #include <iomanip>
 using namespace std;
@@ -23,5 +23,6 @@ int main()
     }
     cout << scienceBook.GetType() << endl;
     cout << socialBook.GetType() << endl;
+    cout << randGen::getRandom() << endl;
     return 0;
 }
