@@ -104,6 +104,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MenuRouter.cpp" />
     <ClCompile Include="menu\Menu0.cpp" />
+    <ClCompile Include="randGen.cpp" />
     <ClCompile Include="ScienceBook.cpp" />
     <ClCompile Include="SocialBook.cpp" />
     <ClCompile Include="Vars.cpp" />
@@ -115,6 +116,7 @@
     <ClInclude Include="IMenu.h" />
     <ClInclude Include="MenuRouter.h" />
     <ClInclude Include="menu\Menu0.h" />
+    <ClInclude Include="randGen.h" />
     <ClInclude Include="ScienceBook.h" />
     <ClInclude Include="SocialBook.h" />
     <ClInclude Include="Vars.h" />

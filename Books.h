@@ -1,5 +1,11 @@
+#pragma once 
 #ifndef BOOKS_H
 #define BOOKS_H
+
+using namespace std;
+/*using std::string;
+using std::ifstream;
+using std::ofstream;*/
 
 class Books {
 private:
@@ -20,7 +26,11 @@ public:
     double GetPrice() { return _price; };
     string GetAuthor() { return _author; };
     string GetPubHouse() { return _pubHouse; };
-//	virtual operator>>( ) = 0;  //TODO: Implement this.
+    friend ifstream& operator>> (ifstream& input, int inputInt);
+    friend ifstream& operator<< (ofstream& output, int outputInt);
+    friend ifstream& operator>> (ifstream& input, Books& b);
+    friend ofstream& operator<< (ofstream& output, Books& b);
+
 };
 
 #endif   //BOOKS_H

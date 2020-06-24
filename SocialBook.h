@@ -1,6 +1,7 @@
 #pragma once
-#include<iostream>
-//#include<string>
+#ifndef SOCIALBOOK_H
+#define SOCIALBOOK_H
+
 #include "Books.h"
 class SocialBook :
     public Books
@@ -12,3 +13,4 @@ public:
 
 };
 
+#endif   //SOCIALBOOK_H

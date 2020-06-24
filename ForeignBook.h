@@ -1,4 +1,7 @@
-#pragma once
+#pragma once 
+#ifndef FOREIGNBOOK_H
+#define FOREIGNBOOK_H
+
 #include "Books.h"
 class ForeignBook :
     public Books
@@ -11,4 +14,6 @@ public:
 
     int GetType() { return _type; }
 };
+
+#endif   //FOREIGNBOOK_H
 
