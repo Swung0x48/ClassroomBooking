@@ -19,7 +19,7 @@ public:
 //    static string GetUserPath() { return UserPath; }
 //    static string GetLogPath() { return LogPath; }
 
-    fstream& Open(const string& path, char mode);
+    fstream& Open(const string& path, string mode);
     void Close();
 };
 

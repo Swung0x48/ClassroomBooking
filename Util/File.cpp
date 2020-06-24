@@ -8,11 +8,13 @@ string File::BookPath = "book.txt";
 string File::UserPath = "user.txt";
 string File::LogPath = "log.txt";
 
-fstream& File::Open(const string& path, char mode)
+fstream& File::Open(const string& path, string mode)
 {
-    if (mode == 'r')
+    if (mode == "r")
         _fs.open(path, ios::in);
-    else if (mode == 'w')
+    else if (mode == "wa")
+        _fs.open(path, ios::out | ios::app);
+    else if (mode == "wt")
         _fs.open(path, ios::out | ios::trunc);
     return _fs;
 }

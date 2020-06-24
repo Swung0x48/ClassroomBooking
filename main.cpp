@@ -18,9 +18,10 @@ int main()
 //    SocialBook socialBook(2, "name", 20, "Tom", "A");
     File file;
 
-    file.Open(File::BookPath, 'w') << scienceBook;
-    file.Close();
-    file.Open(File::BookPath, 'r') >> scienceBook;
+    file.Open(File::BookPath, "wa") << scienceBook;
+    file.Open(File::BookPath, "wa") << scienceBook;
+    file.Close();   // remember to close stream before mode change!!
+    file.Open(File::BookPath, "r") >> scienceBook;
     file.Close();
 
     cout << scienceBook << endl;
