@@ -47,7 +47,7 @@ istream& operator>> (istream& input, Books& b)
 ostream& operator<< (ostream& output, Books& b)
 {
     output << b._type
-        << string(" ")
+        << " "
         << b._number
         << " "
         << quoted(b._name)

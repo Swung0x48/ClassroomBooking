@@ -3,7 +3,6 @@
 #include "Books/ScienceBook.h"
 #include "Books/SocialBook.h"
 #include "Util.h"
-#include <iostream>
 #include <iomanip>
 using namespace std;
 
@@ -17,9 +16,9 @@ int main()
 //    ScienceBook scienceBook(1, "name", 20, "Tom", "A");
 //    SocialBook socialBook(2, "name", 20, "Tom", "A");
 
-    Books a;
+  /*  Books a;
     cin >> a;
-    cout << a;
+    cout << a;*/
 
     Vars vars;
     if (!vars.menuRouter.EnterMenu(0))
