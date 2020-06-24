@@ -16,8 +16,13 @@ int main()
 
 //    ScienceBook scienceBook(1, "name", 20, "Tom", "A");
 //    SocialBook socialBook(2, "name", 20, "Tom", "A");
-    Vars Vars;
-    if (!Vars.menuRouter.EnterMenu(0))
+
+    Books a;
+    cin >> a;
+    cout << a;
+
+    Vars vars;
+    if (!vars.menuRouter.EnterMenu(0))
     {
         cout << "Invaild Menu!" << endl;
     }

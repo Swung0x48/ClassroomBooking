@@ -20,14 +20,15 @@ protected:
 
 public:
     Books(int type, int number, string name, double price, string author, string pubHouse);
+    Books();
     int GetType() { return _type; }
     int GetNumber() { return _number; }
     string GetName() { return _name; };
     double GetPrice() { return _price; };
     string GetAuthor() { return _author; };
     string GetPubHouse() { return _pubHouse; };
-//    friend ifstream& operator>> (ifstream& input, Books& b);
-//    friend ofstream& operator<< (ofstream& output, Books& b);
+    friend istream& operator>> (istream& input, Books& b);
+    friend ostream& operator<< (ostream& output, Books& b);
 
 };
 
