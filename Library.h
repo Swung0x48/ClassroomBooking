@@ -4,18 +4,23 @@
 
 #include <iostream>
 #include <map>
+#include <vector>
+#include "User.h"
+
 using namespace std;
 
 class Library
 {
 private:
 	map<Book, int> _stock;
+    vector<User> _userList;
+    //vector<Log> _logList;
 
 
 public:
 	//ADMIN
-	void AddBook(int number, int quantity);
-	void Satistics(int type);
+	void AddBook(Book &book, int quantity);
+	void Statistics(int type);
 	void ShowAllLogs();
 
 	//USER
@@ -25,6 +30,9 @@ public:
 	void SignIn(string account, string password);
 	void Register(string account, string password);
 	void QueryLog(string account);
+
+	//LOGIC
+	friend ostream& operator<< (ostream& output, const map<Book, int>& stock);
 };
 
 #endif   //LIBRARY_H

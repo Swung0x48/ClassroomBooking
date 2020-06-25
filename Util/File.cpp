@@ -8,6 +8,7 @@
 string File::BookPath = "book.txt";
 string File::UserPath = "user.txt";
 string File::LogPath = "log.txt";
+string File::StockPath = "stock.txt";
 
 fstream& File::Open(const string& path, string mode)
 {

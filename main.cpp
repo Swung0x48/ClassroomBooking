@@ -4,6 +4,7 @@
 #include "Books/SocialBook.h"
 #include "Util/Util.h"
 #include "Util/File.h"
+#include "Library.h"
 #include <iomanip>
 using namespace std;
 
@@ -18,32 +19,34 @@ int main()
      ScienceBook scienceBook1(2, "name2", 30, "Jack", "B");
 //    SocialBook socialBook(2, "name", 20, "Tom", "A");
      Book b;
-     map<int, int> stock;
-     int _quantity = 1;
-     stock[b._number] = _quantity;
 
      File file;
 
-    file.Open(File::BookPath, "wt") << scienceBook;
-    file.Close();
-    file.Open(File::BookPath, "wa") << scienceBook << scienceBook1 << scienceBook;
-    file.Close();   // remember to close stream before mode change!!
-    file.Open(File::BookPath, "r") >> scienceBook1 >> scienceBook1 >> scienceBook;
-    file.Close();
+//    file.Open(File::BookPath, "wt") << scienceBook;
+//    file.Close();
+//    file.Open(File::BookPath, "wa") << scienceBook << scienceBook1 << scienceBook;
+//    file.Close();   // remember to close stream before mode change!!
+//    file.Open(File::BookPath, "r") >> scienceBook1 >> scienceBook1 >> scienceBook;
+//    file.Close();
 
     cout << scienceBook << endl;
     cout << scienceBook.GetName() << endl;
 
-    vector<Book> vec;
-    file.LoadAll(file.Open(File::BookPath, "r"), vec);
-    vec.clear();
-    vec.push_back(scienceBook);
-    file.SaveAll(file.Open(File::BookPath, "wt"), vec);
+    Library library;
+    library.AddBook(scienceBook, 1);
+    library.AddBook(scienceBook1, 2);
 
-    for (auto i: vec)
-    {
-        cout << i;
-    }
+
+//    vector<Book> vec;
+//    file.LoadAll(file.Open(File::BookPath, "r"), vec);
+//    vec.clear();
+//    vec.push_back(scienceBook);
+//    file.SaveAll(file.Open(File::BookPath, "wt"), vec);
+//
+//    for (auto i: vec)
+//    {
+//        cout << i;
+//    }
 
 
     Vars vars;

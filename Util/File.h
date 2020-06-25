@@ -20,6 +20,7 @@ public:
     static string BookPath;
     static string UserPath;
     static string LogPath;
+    static string StockPath;
 //    static string GetBookPath() { return BookPath; }
 //    static string GetUserPath() { return UserPath; }
 //    static string GetLogPath() { return LogPath; }

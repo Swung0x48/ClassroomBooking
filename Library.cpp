@@ -14,10 +14,11 @@ stock[b._number] = _quantity;*/
 
 
 //ADMIN
-void Library::AddBook(int number, int quantity) {
-	
+void Library::AddBook(Book &book, int quantity)
+{
+    _stock[book] += quantity;
 }
-void Library::Satistics(int type) {
+void Library::Statistics(int type) {
 
 }
 void Library::ShowAllLogs() {
@@ -44,3 +45,12 @@ void Library::QueryLog(string account) {
 
 }
 
+ostream &operator<<(ostream &output, const map<Book, int>& stock)
+{
+    for (const auto& item: stock)
+    {
+        Book bookItem(item.first);
+        output << item.second << " " << bookItem;
+    }
+    return output;
+}

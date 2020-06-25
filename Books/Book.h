@@ -9,7 +9,7 @@ using std::ofstream;*/
 
 class Book {
 protected:
-   // int _number;
+    int _number;
     string _name;
     double _price;
     string _author;
@@ -19,7 +19,6 @@ protected:
     int _type = 0;
 
 public:
-    int _number;
     Book(int type, int number, string name, double price, string author, string pubHouse);
     Book();
     int GetType() { return _type; }
@@ -31,6 +30,10 @@ public:
     friend istream& operator>> (istream& input, Book& b);
     friend ostream& operator<< (ostream& output, Book& b);
 
+    bool operator<(const Book& rhs) const
+    {
+        return _number < rhs._number;
+    }
 };
 
 #endif   //BOOKS_H
