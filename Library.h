@@ -36,6 +36,7 @@ public:
 	friend ostream& operator<< (ostream& output, const map<Book, int>& stock);
     friend ostream& operator<< (ostream& output, const vector<User>& userList);
     friend ostream& operator<< (ostream& output, const vector<Log>& logList);
+    //TODO: istream& operator>>()
 };
 
 #endif   //LIBRARY_H
