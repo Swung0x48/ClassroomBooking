@@ -15,7 +15,8 @@ private:
 	time_t _returnTime; //TODO:
 
 public:
-	void SetAccount( string account ) { _account = account; }
+    Log(string account, int bookNumber);
+    void SetAccount( string account ) { _account = account; }
 	void SetBookNumber(int bookNumber) { _bookNumber = bookNumber; }
 	string GetAccount() { return _account; }
 	int GetBookNumber() { return _bookNumber; }
