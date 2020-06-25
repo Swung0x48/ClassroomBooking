@@ -3,6 +3,7 @@
 //
 
 #include "File.h"
+#include "../Books/Book.h"
 
 string File::BookPath = "book.txt";
 string File::UserPath = "user.txt";
@@ -23,3 +24,7 @@ void File::Close()
 {
     _fs.close();
 }
+
+
+
+

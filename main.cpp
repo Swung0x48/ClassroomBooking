@@ -15,17 +15,31 @@ int main()
     cout << quoted(a) << "/" << quoted(b);*/
 
      ScienceBook scienceBook(1, "name", 20, "Tom", "A");
+     ScienceBook scienceBook1(2, "name2", 30, "Jack", "B");
 //    SocialBook socialBook(2, "name", 20, "Tom", "A");
     File file;
 
-    file.Open(File::BookPath, "wa") << scienceBook;
-    file.Open(File::BookPath, "wa") << scienceBook << scienceBook << scienceBook;
+    file.Open(File::BookPath, "wt") << scienceBook;
+    file.Close();
+    file.Open(File::BookPath, "wa") << scienceBook << scienceBook1 << scienceBook;
     file.Close();   // remember to close stream before mode change!!
-    file.Open(File::BookPath, "r") >> scienceBook;
+    file.Open(File::BookPath, "r") >> scienceBook1 >> scienceBook1 >> scienceBook;
     file.Close();
 
     cout << scienceBook << endl;
     cout << scienceBook.GetName() << endl;
+
+    vector<Book> vec;
+    file.LoadAll(file.Open(File::BookPath, "r"), vec);
+    vec.clear();
+    vec.push_back(scienceBook);
+    file.SaveAll(file.Open(File::BookPath, "wt"), vec);
+
+    for (auto i: vec)
+    {
+        cout << i;
+    }
+
 
     Vars vars;
     if (!vars.menuRouter.EnterMenu(0))
