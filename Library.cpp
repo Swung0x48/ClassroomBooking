@@ -13,7 +13,7 @@ int _quantity = 1;
 stock[b._number] = _quantity;*/
 
 
-//ACL
+//ADMIN
 void Library::AddBook(int number, int quantity) {
 	
 }
@@ -34,7 +34,7 @@ void Library::Return(int number, int quantity) {
 void Library::Search(int number) {
 
 }
-void	Library::SignIn(string account, string password) {
+void Library::SignIn(string account, string password) {
 
 }
 void Library::Register(string account, string password) {

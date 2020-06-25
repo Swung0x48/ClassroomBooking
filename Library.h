@@ -6,21 +6,23 @@
 #include <map>
 using namespace std;
 
-class Library{
+class Library
+{
 private:
-	map<int, int> stock;
+	map<Book, int> _stock;
+
 
 public:
-	//ACL
+	//ADMIN
 	void AddBook(int number, int quantity);
 	void Satistics(int type);
-	void ShowAllLogs( );
+	void ShowAllLogs();
 
 	//USER
-	void Lend(int number, int quantity );
+	void Lend(int number, int quantity);
 	void Return(int number, int quantity);
 	void Search(int number);
-	void	SignIn(string account, string password);
+	void SignIn(string account, string password);
 	void Register(string account, string password);
 	void QueryLog(string account);
 };
