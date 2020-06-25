@@ -28,8 +28,7 @@ ostream& operator<<(ostream& output, User& u)
         << " "
         << u._password
         << " "
-        << u._type
-        << endl;
+        << u._type;
 
     return output;
 }
