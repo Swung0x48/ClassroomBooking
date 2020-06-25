@@ -22,7 +22,7 @@ public:
     Book(int type, int number, string name, double price, string author, string pubHouse);
     Book();
     int GetType() { return _type; }
-    int GetNumber() { return _number; }
+    int GetNumber() const { return _number; }
     string GetName() { return _name; };
     double GetPrice() { return _price; };
     string GetAuthor() { return _author; };

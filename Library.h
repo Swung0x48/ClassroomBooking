@@ -26,13 +26,16 @@ public:
 
 	//USER
 	void Lend(int number, int quantity);
-	void Return(int number, int quantity);   //???
+	void Return(int number, int quantity);
 	Book Search(int number);   
 	User Register(string account, string password);
+    int SignIn(string account, string password);
 	vector<Log> QueryLog(string account);
 
 	//LOGIC
 	friend ostream& operator<< (ostream& output, const map<Book, int>& stock);
+    friend ostream& operator<< (ostream& output, const vector<User>& userList);
+    friend ostream& operator<< (ostream& output, const vector<Log>& logList);
 };
 
 #endif   //LIBRARY_H

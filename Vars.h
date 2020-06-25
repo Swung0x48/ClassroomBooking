@@ -10,7 +10,9 @@
 
 class Vars
 {
+    int _currentUser;
 public:
+
     MenuRouter menuRouter;
     Vars();
     ~Vars();

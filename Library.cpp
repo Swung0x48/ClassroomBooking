@@ -22,16 +22,26 @@ int Library::Statistics(int type) {
     }
     return sum;
 }
-void Library::ShowAllLogs() { //TODO:
-
+void Library::ShowAllLogs()
+{
+    for (auto item: _logList)
+    {
+        cout << item << endl;
+    }
 }
 
 //USER
 void Library::Lend(int number, int quantity) {
-    Book b;
-    for (auto item : _stock) {
-        if (b.GetNumber() == number) {
-            _stock[b] -= quantity;
+    for (auto item : _stock)
+    {
+        Book book = item.first;
+        if (book.GetNumber() == number)
+        {
+            if (quantity > item.second)
+            {
+                throw "NotEnoughInStockException";
+            }
+            _stock[item.first] -= quantity;
         }
         //TODO: get borrowtime
     }
@@ -40,48 +50,52 @@ void Library::Return(int number, int quantity) {
     Book b;
     for (auto item : _stock) {
         if (b.GetNumber() == number) {
-            _stock[b]+= quantity;
+            _stock[b] += quantity;
         }
         //TODO: get returntime
+    }
 }
-Book Library::Search(int number) {   //???
-    Book b;
-    for (auto item : _stock) {
-        if (b.GetNumber() == number) {
-            return b;
+Book Library::Search(int number)
+{
+//    Book b;
+    for (auto item : _stock)
+    {
+//        if (b.GetNumber() == number) {
+//            return b;
+//        }
+        if (item.first.GetNumber() == number)
+        {
+            return item.first;
         }
     }
     throw "BookNotFoundException";
 }
+
 int Library::SignIn(string account, string password) {
-    User u;
     for (auto item : _userList) {
-        if (u.GetAccount() == account && u.GetPassword==password) {
-            return u.GetType();
+        if (item.GetAccount() == account && item.GetPassword() == password) {
+            return item.GetType();
         }
-        else if (u.GetAccount() == account && u.GetPassword != password) {
-            throw "PasswordNotFoundException";
+        else if (item.GetAccount() == account && item.GetPassword() != password) {
+            throw "PasswordIncorrectException";
         }
     }
     throw "UserNotFoundException";
 }
 User Library::Register(string account, string password) {
-    User u;
-    SetAccount(account);
-    SetPassword(password);
     for (auto item : _userList) {
-        if (u.GetAccount() == account ) {
+        if (item.GetAccount() == account ) {
             throw "UserAccountIsUsedException";
         }
     }
+    User u(account, password, 1);
     return u;
 }
 vector<Log> Library::QueryLog(string account) {
     vector<Log> result;
-    Log l;
     for (auto item : _logList) {
-        if (l.GetAccount() == account) {
-            result.insert(result.end(), l);
+        if (item.GetAccount() == account) {
+            result.push_back(item);
         }
     }
     return result;
@@ -92,7 +106,25 @@ ostream &operator<<(ostream &output, const map<Book, int>& stock)
     for (const auto& item: stock)
     {
         Book bookItem(item.first);
-        output << item.second << " " << bookItem;
+        output << item.second << " " << bookItem << endl;
     }
     return output;
 }
+
+ostream &operator<<(ostream &output, const vector<User> &userList)
+{
+    for (const auto& item: userList)
+    {
+        output << userList << endl;
+    }
+    return output;
+}
+
+ostream &operator<<(ostream &output, const vector<Log> &logList) {
+    for (const auto& item: logList)
+    {
+        output << logList << endl;
+    }
+    return output;
+}
+
