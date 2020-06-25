@@ -17,7 +17,12 @@ int main()
      ScienceBook scienceBook(1, "name", 20, "Tom", "A");
      ScienceBook scienceBook1(2, "name2", 30, "Jack", "B");
 //    SocialBook socialBook(2, "name", 20, "Tom", "A");
-    File file;
+     Book b;
+     map<int, int> stock;
+     int _quantity = 1;
+     stock[b._number] = _quantity;
+
+     File file;
 
     file.Open(File::BookPath, "wt") << scienceBook;
     file.Close();

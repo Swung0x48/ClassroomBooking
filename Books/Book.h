@@ -9,7 +9,7 @@ using std::ofstream;*/
 
 class Book {
 protected:
-    int _number;
+   // int _number;
     string _name;
     double _price;
     string _author;
@@ -19,6 +19,7 @@ protected:
     int _type = 0;
 
 public:
+    int _number;
     Book(int type, int number, string name, double price, string author, string pubHouse);
     Book();
     int GetType() { return _type; }
