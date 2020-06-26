@@ -32,10 +32,10 @@ public:
     {
         return _number < rhs._number;
     }
-    bool operator<(const Book* rhs) const
-    {
-        return this->_number < rhs->_number;
-    }
+//    bool operator<(const Book* rhs) const
+//    {
+//        return this->_number < rhs->_number;
+//    }
 };
 
 #endif   //BOOKS_H
