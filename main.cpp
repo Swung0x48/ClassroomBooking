@@ -50,6 +50,7 @@ int main()
 
 
     file.SaveAll(file.Open(File::StockPath, "wt"), library.GetStock());
+    file.LoadAll(file.Open(file.StockPath, "r"), library.GetStock());
 
     Vars vars;
     if (!vars.menuRouter.EnterMenu(0))

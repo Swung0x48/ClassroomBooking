@@ -56,9 +56,7 @@ ostream& operator<< (ostream& output, const Book& b)
         << " "
         << quoted(b._author)
         << " "
-        << quoted(b._pubHouse)
-        << endl;
+        << quoted(b._pubHouse);
 
     return output;
 }
-
