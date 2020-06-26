@@ -11,8 +11,10 @@ private:
 
 public:
     ForeignBook(int number, string name, double price, string author, string pubHouse, string language );
+    friend istream& operator>> (istream& input, ForeignBook& b);
+    friend ostream& operator<< (ostream& output, const ForeignBook& b);
 
-  //  int GetType() { return _type; }
+    //  int GetType() { return _type; }
 };
 
 #endif   //FOREIGNBOOK_H

@@ -26,6 +26,8 @@ Book::Book():
 istream& operator>> (istream& input, Book& b)
 {
     int type;
+    input >> type;
+    // TODO: check type
     int number;
     string name;
     double price;

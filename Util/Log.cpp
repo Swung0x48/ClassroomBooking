@@ -19,9 +19,10 @@ istream &operator>>(istream &input, Log &log) {
                  >> log._returnTime;
 }
 
-Log::Log(string account, int bookNumber)
+Log::Log(string account, int bookNumber, int quantity)
 :   _account(account),
     _bookNumber(bookNumber),
+    _quantity(quantity),
     _borrowTime(Util::getTime()),
     _returnTime(0)
 {}

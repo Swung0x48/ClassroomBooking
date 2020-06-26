@@ -2,22 +2,24 @@
 #include <iomanip>
 #include <string>
 #include <map>
+#include <algorithm>
 #include "Books/Book.h"
 #include "Library.h"
 
 using namespace std;
 
 //ADMIN
-void Library::AddBook(Book &book, int quantity)
+void Library::AddBook(Book * book, int quantity)
 {
     _stock[book] += quantity;
 }
 int Library::Statistics(int type) {
     int sum=0;
-    for (auto item : _stock) {
-        Book book = item.first;
-        if (book.GetType() == type) {
-            sum += _stock[book];
+    for (auto item : _stock)
+    {
+        if (item.first->GetType() == type)
+        {
+            sum += item.second;
         }
     }
     return sum;
@@ -31,35 +33,66 @@ void Library::ShowAllLogs()
 }
 
 //USER
-void Library::Lend(int number, int quantity) {
+void Library::Lend(string account, int number, int quantity)
+{
     for (auto item : _stock)
     {
-        Book book = item.first;
-        if (book.GetNumber() == number)
+        if (item.first->GetNumber() == number)
         {
             if (quantity > item.second)
             {
                 throw "NotEnoughInStockException";
             }
             _stock[item.first] -= quantity;
+            _logList.push_back(Log(account, number, quantity));
+            return;
         }
-        //TODO: get borrowtime
+    }
+
+}
+void Library::Return(string account, int number, int quantity)
+{
+//    for (auto item : _stock)
+//    {
+//        if (item.first->GetNumber() == number) {
+//            _stock[item.first] += quantity;
+//        }
+//    }
+//TODO
+    try
+    {
+        Book* book = Search(number);
+
+        for (auto item: _logList)
+        {
+            if (item.GetAccount() == account)
+            {
+                if (item.GetBookNumber() == number)
+                {
+                    _stock[book] += quantity;
+                    item.SetQuantity(item.GetQuantity() - quantity);
+                }
+                else
+                {
+                    continue;
+                }
+            }
+            else
+            {
+                continue;
+            }
+        }
+    }
+    catch (const char * c)
+    {
+        throw c;
     }
 }
-void Library::Return(int number, int quantity) {
-    for (auto item : _stock) {
-        Book book = item.first;
-        if (book.GetNumber() == number) {
-            _stock[book] += quantity;
-        }
-        //TODO: get returntime
-    }
-}
-Book Library::Search(int number)
+Book* Library::Search(int number)
 {
     for (auto item : _stock)
     {
-        if (item.first.GetNumber() == number)
+        if (item.first->GetNumber() == number)
         {
             return item.first;
         }
