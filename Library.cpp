@@ -97,30 +97,35 @@ vector<Log> Library::QueryLog(string account) {
     return result;
 }
 
-ostream &operator<<(ostream &output, const map<Book, int>& stock)
-{
-    for (const auto& item: stock)
-    {
-        Book bookItem(item.first);
-        output << item.second << " " << bookItem << endl;
-    }
-    return output;
-}
-
-ostream &operator<<(ostream &output, const vector<User> &userList)
-{
-    for (const auto& item: userList)
-    {
-        output << userList << endl;
-    }
-    return output;
-}
-
-ostream &operator<<(ostream &output, const vector<Log> &logList) {
-    for (const auto& item: logList)
-    {
-        output << logList << endl;
-    }
-    return output;
-}
+//ostream &operator<<(ostream &output, const map<Book, int>& stock)
+//{
+//    for (const auto& item: stock)
+//    {
+//        Book bookItem(item.first);
+//        output << item.second << " " << bookItem << endl;
+//    }
+//    return output;
+//}
+//
+//ostream &operator<<(ostream &output, const vector<User> &userList)
+//{
+//    for (const auto& item: userList)
+//    {
+//        output << userList << endl;
+//    }
+//    return output;
+//}
+//
+//ostream &operator<<(ostream &output, const vector<Log> &logList) {
+//    for (const auto& item: logList)
+//    {
+//        output << logList << endl;
+//    }
+//    return output;
+//}
+//
+//istream &operator>>(istream &input, const map<Book, int>& stock)
+//{
+//
+//}
 

@@ -33,10 +33,16 @@ public:
 	vector<Log> QueryLog(string account);
 
 	//LOGIC
-	friend ostream& operator<< (ostream& output, const map<Book, int>& stock);
-    friend ostream& operator<< (ostream& output, const vector<User>& userList);
-    friend ostream& operator<< (ostream& output, const vector<Log>& logList);
-    //TODO: istream& operator>>()
+    map<Book, int> GetStock() { return _stock; }
+    vector<User> GetUserList() { return _userList; }
+    vector<Log> GetLogList() { return _logList; }
+//	friend ostream& operator<< (ostream& output, const map<Book, int>& stock);
+//    friend ostream& operator<< (ostream& output, const vector<User>& userList);
+//    friend ostream& operator<< (ostream& output, const vector<Log>& logList);
+//    friend istream& operator>> (istream& input, const map<Book, int>& stock);
+//    friend istream& operator>> (istream& input, const vector<User>& userList);
+//    friend istream& operator>> (istream& input, const vector<Log>& logList);
+
 };
 
 #endif   //LIBRARY_H
