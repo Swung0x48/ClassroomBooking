@@ -18,7 +18,7 @@ public:
 	string GetPassword() { return _password; }
 
 	friend istream& operator>> (istream& input, User& u);
-	friend ostream& operator<< (ostream& output, User& u);
+    friend ostream& operator<< (ostream& output, const User& u);
 };
 
 #endif   //USER_H

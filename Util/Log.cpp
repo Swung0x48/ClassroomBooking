@@ -2,7 +2,7 @@
 #include "Log.h"
 #include "Util.h"
 
-ostream &operator<<(ostream &output, Log &log) {
+ostream &operator<<(ostream &output, const Log &log) {
     return output << quoted(log._account)
                   << " "
                   << log._bookNumber

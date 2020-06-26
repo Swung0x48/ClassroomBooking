@@ -49,6 +49,8 @@ int main()
 //    }
 
 
+    file.SaveAll(file.Open(File::StockPath, "wt"), library.GetStock());
+
     Vars vars;
     if (!vars.menuRouter.EnterMenu(0))
     {

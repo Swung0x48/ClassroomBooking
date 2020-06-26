@@ -15,7 +15,6 @@ protected:
     string _author;
     string _pubHouse;
 
-protected:
     int _type = 0;
 
 public:
@@ -28,7 +27,7 @@ public:
     string GetAuthor() { return _author; };
     string GetPubHouse() { return _pubHouse; };
     friend istream& operator>> (istream& input, Book& b);
-    friend ostream& operator<< (ostream& output, Book& b);
+    friend ostream& operator<< (ostream& output, const Book& b);
 
     bool operator<(const Book& rhs) const
     {

@@ -22,7 +22,7 @@ istream& operator>> (istream& input, User& u) {
 
     return input;
 }
-ostream& operator<<(ostream& output, User& u)
+ostream& operator<<(ostream& output, const User& u)
 {
     output << u._account
         << " "

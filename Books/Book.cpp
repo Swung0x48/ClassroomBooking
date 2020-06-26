@@ -44,7 +44,7 @@ istream& operator>> (istream& input, Book& b)
     return input;
 }
 
-ostream& operator<< (ostream& output, Book& b)
+ostream& operator<< (ostream& output, const Book& b)
 {
     output << b._type
         << " "
