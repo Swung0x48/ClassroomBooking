@@ -33,8 +33,8 @@ int main()
     cout << scienceBook.GetName() << endl;
 
     Library library;
-    library.AddBook(scienceBook, 1);
-    library.AddBook(scienceBook1, 2);
+    library.AddBook(&scienceBook, 1);
+    library.AddBook(&scienceBook1, 2);
 
 
 //    vector<Book> vec;

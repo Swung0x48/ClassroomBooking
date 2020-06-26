@@ -14,13 +14,12 @@ protected:
     double _price;
     string _author;
     string _pubHouse;
-
-    int _type = 0;
+    int _type = -1;
 
 public:
     Book(int type, int number, string name, double price, string author, string pubHouse);
     Book();
-    int GetType() { return _type; }
+    virtual int GetType() { return _type; }
     int GetNumber() const { return _number; }
     string GetName() { return _name; };
     double GetPrice() { return _price; };
@@ -28,10 +27,14 @@ public:
     string GetPubHouse() { return _pubHouse; };
     friend istream& operator>> (istream& input, Book& b);
     friend ostream& operator<< (ostream& output, const Book& b);
-
+    // TODO: Add virtual function delegate.
     bool operator<(const Book& rhs) const
     {
         return _number < rhs._number;
+    }
+    bool operator<(const Book* rhs) const
+    {
+        return this->_number < rhs->_number;
     }
 };
 

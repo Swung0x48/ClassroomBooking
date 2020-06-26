@@ -43,7 +43,7 @@ public:
     {
         for (auto i: map)
         {
-            fs << i.first << " " << i.second << endl;
+            fs << *(i.first) << " " << i.second << endl;
         }
         fs.close();
     }
@@ -73,7 +73,7 @@ public:
         {
             istringstream ss(str);
             T1 first; T2 second;
-            ss >> first >> second;
+            ss >> *(first) >> second;
             map[first] += second;   // TODO: Debug
         }
     }
