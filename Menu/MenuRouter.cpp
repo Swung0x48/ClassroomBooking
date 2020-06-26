@@ -19,7 +19,7 @@ bool MenuRouter::EnterMenu(int option)
             return true;
         }
     }
-    return false;
+    throw "MenuNotFoundException";
 }
 
 MenuRouter::~MenuRouter()
