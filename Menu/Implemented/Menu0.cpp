@@ -3,7 +3,7 @@
 //
 
 #include "Menu0.h"
-#include "Library.h"
+#include "../../Library.h"
 
 void Menu0::Run()
 {
@@ -49,7 +49,7 @@ void Menu0::Run()
                 continue;
             }
             else {
-                throw "DontHaveThisChoiceException";
+                throw "ChoiceNotExistException";
             }
         }
     }
