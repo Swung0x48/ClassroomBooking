@@ -6,12 +6,15 @@
 class ForeignBook :
     public Book
 {
-private:
+protected:
     string _language;
+    virtual void Deserialize(string rawStr);
+    virtual string Serialize() const;
 
 public:
+    ForeignBook();
     ForeignBook(int number, string name, double price, string author, string pubHouse, string language);
-    virtual ForeignBook Create(string rawStr);
+
     friend istream& operator>> (istream& input, ForeignBook& b);
     friend ostream& operator<< (ostream& output, const ForeignBook& b);
 

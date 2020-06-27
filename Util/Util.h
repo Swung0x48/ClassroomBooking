@@ -13,6 +13,7 @@ class Util
 private:
     static default_random_engine randEngine;
 public:
+
     static int getRandom() { return randEngine(); }
 
     static string to_string(int val)

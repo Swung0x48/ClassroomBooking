@@ -6,6 +6,7 @@ using namespace std;
 
 #include "Book.h"
 #include "ForeignBook.h"
+#include "../Util/Util.h"
 
 
 ForeignBook::ForeignBook(
@@ -24,32 +25,25 @@ ForeignBook::ForeignBook(
         author,
         pubHouse),
         _language(language)
-{
-
-}
+{}
 
 istream &operator>>(istream &input, ForeignBook &b)
 {
     string str;
     getline(input, str);
-    b = b.Create(str);
+    b.Deserialize(str);
 
     return input;
+    // TODO: Test & debug
 }
 
 ostream &operator<<(ostream &output, const ForeignBook &b) {
-    output << b._type << " "
-           << b._number << " "
-           << quoted(b._name) << " "
-           << b._price << " "
-           << quoted(b._author) << " "
-           << quoted(b._pubHouse) << " "
-           << quoted(b._language);
+    output << b.Serialize();
     return output;
-    // TODO: Use a virtual function as delegate
+    // TODO: Test & debug
 }
 
-ForeignBook ForeignBook::Create(string rawStr)
+void ForeignBook::Deserialize(string rawStr)
 {
     istringstream ss(rawStr);
     int number;
@@ -66,5 +60,35 @@ ForeignBook ForeignBook::Create(string rawStr)
        >> quoted(pubHouse)
        >> quoted(language);
 
-    return ForeignBook(number, name, price, author, pubHouse, language);
+    _number = number;
+    _name = name;
+    _price = price;
+    _author = author;
+    _pubHouse = pubHouse;
+    _language = language;
 }
+
+string ForeignBook::Serialize() const
+{
+    ostringstream ss;
+    ss << _type << " "
+       << _number << " "
+       << quoted(_name) << " "
+       << _price << " "
+       << quoted(_author) << " "
+       << quoted(_pubHouse) << " "
+       << quoted(_language);
+
+    return ss.str();
+}
+
+ForeignBook::ForeignBook():
+        Book(
+                3,
+                -1,
+                "undefined",
+                0,
+                "undefined",
+                "undefined"),
+        _language("undefined")
+{}

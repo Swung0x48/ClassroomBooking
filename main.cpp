@@ -49,14 +49,24 @@ int main()
 //    }
 
 
-    file.SaveAll(file.Open(File::StockPath, "wt"), library.GetStock());
-    file.LoadAll(file.Open(File::StockPath, "r"), library.GetStock());
+//    file.SaveAll(file.Open(File::StockPath, "wt"), library.GetStock());
+//    file.LoadAll(file.Open(File::StockPath, "r"), library.GetStock());
+// TODO: fix the SegFault (exit code 11)
+
 
     Vars vars;
-    if (!vars.menuRouter.EnterMenu(0))
+    int option;
+    cin >> option;
+    try
     {
-        cout << "Invaild Menu!" << endl;
+        vars.menuRouter.EnterMenu(option);
     }
+    catch (const char * c)
+    {
+        cout << c;
+    }
+
+
     cout << scienceBook.GetType() << endl;
 //    cout << socialBook.GetType() << endl;
 //    cout << Util::getRandom() << endl;

@@ -9,7 +9,7 @@
 using namespace std;
 
 //ADMIN
-void Library::AddBook(Book * book, int quantity)
+void Library::AddBook(Book* book, int quantity)
 {
     _stock[book] += quantity;
 }

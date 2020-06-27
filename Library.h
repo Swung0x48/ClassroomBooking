@@ -16,11 +16,19 @@ private:
 	map<Book*, int> _stock;
     vector<User> _userList;
     vector<Log> _logList;
-
+//    template<class T>
+//    struct ptr_less
+//    {
+//        bool operator()(T* lhs, T* rhs)
+//        {
+//            return *lhs < *rhs;
+//        }
+//    };
+// TODO: Implement less() to compare pointers.
 
 public:
 	//ADMIN
-	void AddBook(Book * book, int quantity);
+	void AddBook(Book* book, int quantity);
 	int Statistics(int type);
 	void ShowAllLogs();
 
