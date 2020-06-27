@@ -12,7 +12,7 @@ using namespace std;
 
 class Library
 {
-private:
+public:
 	map<Book*, int> _stock;
     vector<User> _userList;
     vector<Log> _logList;
@@ -26,7 +26,6 @@ private:
 //    };
 // TODO: Implement less() to compare pointers.
 
-public:
 	//ADMIN
 	void AddBook(Book* book, int quantity);
 	int Statistics(int type);
