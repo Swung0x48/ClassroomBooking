@@ -9,10 +9,11 @@
 using namespace std;
 
 //ADMIN
-void Library::AddBook(Book* book, int quantity)
+void Library::AddBook(Book* book, int quantity)//addquantity
 {
     _stock[book] += quantity;
 }
+//TODO: addbook(variety)
 int Library::Statistics(int type) {
     int sum=0;
     for (auto item : _stock)

@@ -1,22 +1,18 @@
-//
-// Created by Swung 0x48 on 2020/6/22.
-//
-
-#ifndef MENU1_H
-#define MENU1_H
+#ifndef MENU6_H
+#define MENU6_H
 
 #include "../IMenu.h"
 #include <iostream>
 using namespace std;
 
-class Menu1: public IMenu
+class Menu5: public IMenu
 {
 protected:
-    int _option = 1;
+    int _option = 5;
 public:
     virtual int GetOption() { return _option; }
     virtual void Run();
 };
 
 
-#endif //MENU1_H
+#endif //MENU5_H
