@@ -21,12 +21,14 @@ protected:
 public:
     Book(int type, int number, string name, double price, string author, string pubHouse);
     Book();
+
     virtual int GetType() { return _type; }
     int GetNumber() const { return _number; }
     string GetName() { return _name; };
     double GetPrice() { return _price; };
     string GetAuthor() { return _author; };
     string GetPubHouse() { return _pubHouse; };
+    virtual void ShowMe();
     friend istream& operator>> (istream& input, Book& b);
     friend ostream& operator<< (ostream& output, const Book& b);
     // TODO: Add virtual function delegate.
@@ -35,6 +37,7 @@ public:
     {
         return _number < rhs._number;
     }
+    ~Book();
 //    bool operator<(const Book* rhs) const
 //    {
 //        return this->_number < rhs->_number;

@@ -9,6 +9,12 @@ User::User(string account, string password, int type) :
 	_type(type)
 {}
 
+User::User():
+    _account("undefined"),
+    _password("undefined"),
+    _type(-1)
+{}
+
 istream& operator>> (istream& input, User& u) {
     string account;
     string password;

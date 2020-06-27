@@ -28,6 +28,7 @@ public:
     fstream& Open(const string& path, string mode);
     void Close();
 
+
     template<class T>
     void SaveAll(fstream& fs, vector<T> vec)
     {
@@ -43,7 +44,7 @@ public:
     {
         for (auto i: map)
         {
-            fs << *(i.first) << " " << i.second << endl;
+            fs << i.second << " " << *(i.first) << endl;
         }
         fs.close();
     }
@@ -65,17 +66,31 @@ public:
         fs.close();
     }
 
-    template<class T1, class T2>
-            void LoadAll(fstream &fs, map<T1, T2> map)
+//    template<class T1, class T2>
+//            void LoadAll(fstream &fs, map<T1, T2>& map)
+//    {
+//        string str;
+//        while (getline(fs, str))
+//        {
+//            istringstream ss(str);
+//            T1 first; T2 second;
+//            ss >> second >> *(first);
+//            map[first] += second;   // TODO: Debug
+//        }
+//        fs.close();
+//    }
+
+    void LoadAll(fstream &fs, map<Book*, int>& map)
     {
         string str;
         while (getline(fs, str))
         {
             istringstream ss(str);
-            T1 first; T2 second;
-            ss >> *(first) >> second;
+            Book* first = new Book(); int second;
+            ss >> second >> *(first);
             map[first] += second;   // TODO: Debug
         }
+        fs.close();
     }
 // TODO: Check for Language book.
 

@@ -131,6 +131,11 @@ vector<Log> Library::QueryLog(string account) {
     return result;
 }
 
+Library::~Library()
+{
+
+}
+
 //ostream &operator<<(ostream &output, const map<Book, int>& stock)
 //{
 //    for (const auto& item: stock)

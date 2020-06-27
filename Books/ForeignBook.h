@@ -9,12 +9,14 @@ class ForeignBook :
 protected:
     string _language;
     virtual void Deserialize(string rawStr);
-    virtual string Serialize() const;
 
 public:
+
+    virtual string Serialize() const;
     ForeignBook();
     ForeignBook(int number, string name, double price, string author, string pubHouse, string language);
 
+    virtual void ShowMe();
     friend istream& operator>> (istream& input, ForeignBook& b);
     friend ostream& operator<< (ostream& output, const ForeignBook& b);
 

@@ -5,6 +5,7 @@
 #include "Util/Util.h"
 #include "Util/File.h"
 #include "Library.h"
+#include "Books/ForeignBook.h"
 #include <iomanip>
 using namespace std;
 
@@ -49,8 +50,15 @@ int main()
 
     File file;
     Vars vars;
-    file.SaveAll(file.Open(File::StockPath, "wt"), vars.library.GetStock());
-    file.LoadAll(file.Open(File::StockPath, "r"), vars.library.GetStock());
+    ForeignBook foreignBook(3, "BookNameF", 10.20, "AuthorName", "PubHouse", "lang");
+//    vars.library.AddBook(&scienceBook1, 2);
+//    vars.library.AddBook(&scienceBook, 4);
+//    vars.library.AddBook(dynamic_cast<Book *>(&foreignBook), 5);
+//    file.SaveAll(file.Open(File::StockPath, "wt"), vars.library._stock);
+    file.LoadAll(file.Open(File::StockPath, "r"), vars.library._stock);
+
+
+
 // TODO: fix the SegFault (exit code 11)
 
     int option;

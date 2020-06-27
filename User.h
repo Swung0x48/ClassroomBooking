@@ -12,7 +12,8 @@ private:
 	int _type;      // 0 - Admin, 1 - User
 
 public:
-	User(string account, string password, int type);
+    User();
+    User(string account, string password, int type);
 	int GetType() { return _type;  }
 	string GetAccount() { return _account; }
 	string GetPassword() { return _password; }

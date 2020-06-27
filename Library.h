@@ -26,7 +26,7 @@ public:
 //        }
 //    };
 // TODO: Implement less() to compare pointers.
-
+    ~Library();
 	//ADMIN
 	void AddBook(Book* book, int quantity);
 	int Statistics(int type);

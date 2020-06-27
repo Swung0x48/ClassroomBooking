@@ -92,3 +92,8 @@ ForeignBook::ForeignBook():
                 "undefined"),
         _language("undefined")
 {}
+
+void ForeignBook::ShowMe() {
+    Book::ShowMe();
+    cout << "语言： " << _language << endl;
+}
