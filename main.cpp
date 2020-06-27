@@ -29,12 +29,12 @@ int main()
 //    file.Open(File::BookPath, "r") >> scienceBook1 >> scienceBook1 >> scienceBook;
 //    file.Close();
 
-    cout << scienceBook << endl;
+   /* cout << scienceBook << endl;
     cout << scienceBook.GetName() << endl;
 
     Library library;
     library.AddBook(&scienceBook, 1);
-    library.AddBook(&scienceBook1, 2);
+    library.AddBook(&scienceBook1, 2);*/
 
 
 //    vector<Book> vec;
