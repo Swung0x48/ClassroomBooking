@@ -20,7 +20,6 @@ int main()
 //    SocialBook socialBook(2, "name", 20, "Tom", "A");
 
 
-     File file;
 
 //    file.Open(File::BookPath, "wt") << scienceBook;
 //    file.Close();
@@ -29,12 +28,12 @@ int main()
 //    file.Open(File::BookPath, "r") >> scienceBook1 >> scienceBook1 >> scienceBook;
 //    file.Close();
 
-   /* cout << scienceBook << endl;
-    cout << scienceBook.GetName() << endl;
+    /* cout << scienceBook << endl;
+     cout << scienceBook.GetName() << endl;
 
-    Library library;
-    library.AddBook(&scienceBook, 1);
-    library.AddBook(&scienceBook1, 2);*/
+     Library library;
+     library.AddBook(&scienceBook, 1);
+     library.AddBook(&scienceBook1, 2);*/
 
 
 //    vector<Book> vec;
@@ -48,15 +47,13 @@ int main()
 //        cout << i;
 //    }
 
-
-//    file.SaveAll(file.Open(File::StockPath, "wt"), library.GetStock());
-//    file.LoadAll(file.Open(File::StockPath, "r"), library.GetStock());
+    File file;
+    Vars vars;
+    file.SaveAll(file.Open(File::StockPath, "wt"), vars.library.GetStock());
+    file.LoadAll(file.Open(File::StockPath, "r"), vars.library.GetStock());
 // TODO: fix the SegFault (exit code 11)
 
-
-    Vars vars;
     int option;
-    vars.library
     cin >> option;
     try
     {

@@ -1,18 +1,19 @@
-#ifndef MAINMENU_H
-#define MAINMENU_H
+#pragma once
+#ifndef MENU0RENTURN_H
+#define MENU0RENTURN_H
 
 #include "../IMenu.h"
 #include <iostream>
 using namespace std;
 
-class MainMenu : public IMenu
+class Menu0 : public IMenu
 {
 protected:
-    int _option = -1;
+    int _option = 0;
 public:
     virtual int GetOption() { return _option; }
     virtual void Run();
 };
 
 
-#endif //MAINMENU_H
+#endif //MENU0RENTURN_H
