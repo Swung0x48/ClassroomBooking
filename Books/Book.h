@@ -16,9 +16,9 @@ protected:
     string _pubHouse;
     int _type = -1;
     virtual void Deserialize(string rawStr);
-    virtual string Serialize() const;
 
 public:
+    virtual string Serialize();
     Book(int type, int number, string name, double price, string author, string pubHouse);
     Book();
 
@@ -30,7 +30,7 @@ public:
     string GetPubHouse() { return _pubHouse; };
     virtual void ShowMe();
     friend istream& operator>> (istream& input, Book& b);
-    friend ostream& operator<< (ostream& output, const Book& b);
+    friend ostream& operator<< (ostream& output, Book& b);
     // TODO: Add virtual function delegate.
 
     bool operator<(const Book& rhs) const

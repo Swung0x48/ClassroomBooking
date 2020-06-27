@@ -48,18 +48,25 @@ int main()
 //        cout << i;
 //    }
 
-    File file;
     Vars vars;
+    File file;
     ForeignBook foreignBook(3, "BookNameF", 10.20, "AuthorName", "PubHouse", "lang");
 //    vars.library.AddBook(&scienceBook1, 2);
 //    vars.library.AddBook(&scienceBook, 4);
 //    vars.library.AddBook(dynamic_cast<Book *>(&foreignBook), 5);
 //    file.SaveAll(file.Open(File::StockPath, "wt"), vars.library._stock);
-    file.LoadAll(file.Open(File::StockPath, "r"), vars.library._stock);
-
-
-
+    file.LoadAll(file.Open(File::UserPath, "r"), Vars::library._userList);
+    file.LoadAll(file.Open(File::StockPath, "r"), Vars::library._stock);
+    for (auto i: Vars::library._stock)
+    {
+        i.first->ShowMe();
+        cout << endl;
+    }
 // TODO: fix the SegFault (exit code 11)
+
+    Vars::menuRouter.EnterMenu(-1);
+    Vars::menuRouter.EnterMenu(0);
+
 
     int option;
     cin >> option;
@@ -74,7 +81,7 @@ int main()
 
 
     cout << scienceBook.GetType() << endl;
-//    cout << socialBook.GetType() << endl;
-//    cout << Util::getRandom() << endl;
+    file.SaveAll(file.Open(File::StockPath, "wt"), Vars::library._stock);
+    file.SaveAll(file.Open(File::UserPath, "wt"), Vars::library._userList);
     return 0;
 }

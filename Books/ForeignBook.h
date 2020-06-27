@@ -12,13 +12,13 @@ protected:
 
 public:
 
-    virtual string Serialize() const;
+    virtual string Serialize();
     ForeignBook();
     ForeignBook(int number, string name, double price, string author, string pubHouse, string language);
 
     virtual void ShowMe();
     friend istream& operator>> (istream& input, ForeignBook& b);
-    friend ostream& operator<< (ostream& output, const ForeignBook& b);
+    friend ostream &operator<<(ostream &output, ForeignBook b);
 
     virtual int GetType() { return _type; }
 };

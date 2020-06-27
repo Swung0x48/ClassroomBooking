@@ -58,7 +58,7 @@ istream& operator>> (istream& input, Book& b)
 //    return input;
 }
 
-ostream& operator<< (ostream& output, const Book& b)
+ostream& operator<< (ostream& output, Book& b)
 {
     output << b.Serialize();
     return output;
@@ -77,7 +77,7 @@ ostream& operator<< (ostream& output, const Book& b)
 //    return output;
 }
 
-string Book::Serialize() const
+string Book::Serialize()
 {
     ostringstream ss;
     ss << _type << " "
