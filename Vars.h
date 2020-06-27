@@ -7,10 +7,12 @@
 
 
 #include "Menu/MenuRouter.h"
+#include "Library.h"
 
 class Vars
 {
     int _currentUser;
+    Library library;
 public:
 
     MenuRouter menuRouter;
