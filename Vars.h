@@ -12,10 +12,11 @@
 class Vars
 {
     int _currentUser;
-    Library library;
 public:
-
+    Library library;
     MenuRouter menuRouter;
+    int GetCurrentUser() { return _currentUser; }
+
     Vars();
     ~Vars();
 };

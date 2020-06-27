@@ -1,22 +1,22 @@
 #include "Menu0Return.h"
-#include "Library.h"
+#include "../../Library.h"
 
 void Menu0Return::Run() {
     int _choice;
 
     cout << endl;
     cout << endl;
-    cout << "¡ª¡ª¡ª¡ªÇëÑ¡Ôñ£º¡ª¡ª¡ª¡ª" << endl;
+    cout << "â€”â€”â€”â€”è¯·é€‰æ‹©ï¼šâ€”â€”â€”â€”" << endl;
     cout << endl;
-    cout << "                1.·µ»Ø" << endl;
-    cout << "                2.ÍË³ö" << endl;
+    cout << "                1.è¿”å›ž" << endl;
+    cout << "                2.é€€å‡º" << endl;
     cout << endl;
-    cout << "ÇëÊäÈëÄúµÄÑ¡Ôñ£º" << endl;
+    cout << "è¯·è¾“å…¥æ‚¨çš„é€‰æ‹©ï¼š" << endl;
     if (_choice == 1) {
-        //todo: Ìø×ªMainMenu
+        //todo: è·³è½¬MainMenu
     }
     else if (_choice == 2 {
-        //todo: Ìø×ªMenu7
+        //todo: è·³è½¬Menu7
     }
     else {
         throw "DontHaveThisChoiceException";

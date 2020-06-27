@@ -5,34 +5,34 @@ void LoginMenu2::Run()
 {
     string _account;
     string _password;
-    cout << "¡ª¡ª¡ª¡ª¡ª×¢²á¡ª¡ª¡ª¡ª¡ª" << endl;
+    cout << "â€”â€”â€”â€”â€”æ³¨å†Œâ€”â€”â€”â€”â€”" << endl;
     cout << endl;
-    cout << "               ÇëÊäÈë¹¤ºÅ£º" << endl;
+    cout << "               è¯·è¾“å…¥å·¥å·ï¼š" << endl;
     cin >> _account;
     for (auto item : _userList)//???
     {
         if (item.first->GetAccount() != _account) {
-                cout << "               ÇëÊäÈëÃÜÂë£º" << endl;
+                cout << "               è¯·è¾“å…¥å¯†ç ï¼š" << endl;
                 cin >> _password;
-                cout << "*******  ×¢²á³É¹¦£¡******" << endl;
-                    //TODO£ºÌø×ªMainMenu µÇÂ¼³É¹¦½çÃæ
+                cout << "*******  æ³¨å†ŒæˆåŠŸï¼******" << endl;
+                    //TODOï¼šè·³è½¬MainMenu ç™»å½•æˆåŠŸç•Œé¢
                 }
         else {
             int _choice;
 
-            cout << "******  ¹¤ºÅÒÑ´æÔÚ£¡*****" << endl;
+            cout << "******  å·¥å·å·²å­˜åœ¨ï¼*****" << endl;
             cout << endl;
-            cout << "             ÇëÑ¡Ôñ£º" << endl;
-            cout << "             1.µÇÂ¼" << endl;
-            cout << "             2.ÖØÐÂ×¢²á" << endl;
+            cout << "             è¯·é€‰æ‹©ï¼š" << endl;
+            cout << "             1.ç™»å½•" << endl;
+            cout << "             2.é‡æ–°æ³¨å†Œ" << endl;
             cout << endl;
-            cout << "ÇëÊäÈëÄúµÄÑ¡Ôñ£º" << endl;
+            cout << "è¯·è¾“å…¥æ‚¨çš„é€‰æ‹©ï¼š" << endl;
             cin >> _choice;
             if (_choice == 2) {
-                //TODO:Ìø×ªLoginMenu2 ×¢²á
+                //TODO:è·³è½¬LoginMenu2 æ³¨å†Œ
             }
             else if (_choice == 1) {
-                //TODO:Ìø×ªLoginMenu1 µÇÂ¼
+                //TODO:è·³è½¬LoginMenu1 ç™»å½•
             }
             else {
                 throw "DontHaveThisChoiceException";
