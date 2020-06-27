@@ -2,8 +2,8 @@
 // Created by Swung 0x48 on 2020/6/22.
 //
 
-#ifndef CLASSROOMBOOKING_MENU1_H
-#define CLASSROOMBOOKING_MENU1_H
+#ifndef CLASSROOMBOOKING_MENU0_H
+#define CLASSROOMBOOKING_MENU0_H
 
 #include "../IMenu.h"
 #include <iostream>
