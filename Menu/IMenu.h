@@ -12,7 +12,7 @@ protected:
 public:
     virtual void Run() = 0;
     virtual bool IsSelected(int input);
-    virtual int GetOption() =0;
+    virtual int GetOption() = 0;
     virtual ~IMenu();
 };
 

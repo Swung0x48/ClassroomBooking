@@ -9,41 +9,41 @@ void Menu0::Run()
 {
     string _account;
     string _password;
-    cout << "¡ª¡ª¡ª¡ª¡ªµÇÂ¼¡ª¡ª¡ª¡ª¡ª" << endl;
+    cout << "â€”â€”â€”â€”â€”ç™»å½•â€”â€”â€”â€”â€”" << endl;
     cout << endl;
-    cout << "               ÇëÊäÈë¹¤ºÅ£º" << endl;
+    cout << "               è¯·è¾“å…¥å·¥å·ï¼š" << endl;
     cin >> _account;
     for (auto item :  _userList)
     {
         if (item.first->GetAccount() == _account){
             int flag = 1;
             for (int i = 1; flag; i++) {
-                cout << "               ÇëÊäÈëÃÜÂë£º" << endl;
+                cout << "               è¯·è¾“å…¥å¯†ç ï¼š" << endl;
                 cin >> _password;
                 if (item.first->GetPassword() == _password) {
                     cout << endl;
-                    cout << "*******  µÇÂ¼³É¹¦£¡******" << endl;
+                    cout << "*******  ç™»å½•æˆåŠŸï¼******" << endl;
                     flag = 0;
-                    //TODO£ºÌø×ªMenu2 µÇÂ¼³É¹¦½çÃæ
+                    //TODOï¼šè·³è½¬Menu2 ç™»å½•æˆåŠŸç•Œé¢
                 }
                 else {
-                    cout << "*******  ÃÜÂë´íÎó£¡******" << endl;
+                    cout << "*******  å¯†ç é”™è¯¯ï¼******" << endl;
                 }
             }
         }
         else {
             int _choice;
 
-            cout << "******  ¹¤ºÅ²»´æÔÚ£¡*****" << endl;
+            cout << "******  å·¥å·ä¸å­˜åœ¨ï¼*****" << endl;
             cout << endl;
-            cout << "             ÇëÑ¡Ôñ£º" << endl;
-            cout << "             1.ÖØÐÂµÇÂ¼" << endl;
-            cout << "             2.×¢²áÐÂÓÃ»§" << endl;
+            cout << "             è¯·é€‰æ‹©ï¼š" << endl;
+            cout << "             1.é‡æ–°ç™»å½•" << endl;
+            cout << "             2.æ³¨å†Œæ–°ç”¨æˆ·" << endl;
             cout << endl;
-            cout << "ÇëÊäÈëÄúµÄÑ¡Ôñ£º" << endl;
+            cout << "è¯·è¾“å…¥æ‚¨çš„é€‰æ‹©ï¼š" << endl;
             cin >> _choice;
             if (_choice == 2) {
-                //TODO:Ìø×ªMenu1 ×¢²á
+                //TODO:è·³è½¬Menu1 æ³¨å†Œ
             }
             else if (_choice == 1) {
                 continue;
