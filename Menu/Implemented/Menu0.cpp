@@ -12,5 +12,6 @@ void Menu0::Run()
     cout << "4. 查询图书信息" << endl;
     cout << "5. 统计图书" << endl;
     cout << "6. 查询借阅信息" << endl;
-    cout << "7. 退出" << endl;
+    cout << "7. 显示所有图书信息" << endl;
+    cout << "8. 退出" << endl;
 }

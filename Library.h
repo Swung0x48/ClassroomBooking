@@ -38,6 +38,7 @@ public:
 	Book* Search(int number);
 	User Register(string account, string password);
     int SignIn(string account, string password);
+    void ShowAllBooks();
 	vector<Log> QueryLog(string account);
 
 	//LOGIC

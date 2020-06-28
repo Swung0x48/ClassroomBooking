@@ -147,10 +147,21 @@ vector<Log> Library::QueryLog(string account) {
     return result;
 }
 //tested
+
+void Library::ShowAllBooks()
+{
+    for (auto i: _stock)
+    {
+        i.first->ShowMe();
+        cout << "数量： " << i.second << endl;
+        cout << endl;
+    }
+}
 Library::~Library()
 {
 
 }
+
 
 //ostream &operator<<(ostream &output, const map<Book, int>& stock)
 //{
