@@ -29,16 +29,30 @@ int main()
     l._stock[foreignBook] = 5;
     l._stock[foreignBook1] = 6;
 
+    User u("001"," 123456", 0);
+
+ /*   l.Lend("001", 2, 1);
+    l.ShowAllLogs();*/  //Error:borrowtime
+
     //Test:Statistics
  /*   cout << l.Statistics(1) << endl;
     cout << l.Statistics(2) << endl;
     cout << l.Statistics(3) << endl;*/
 
     //Test:Addbookquantity
- /*   
- //    Book *p = &scienceBook;
-     l.AddBook(scienceBook, 1);
-     cout << l._stock[scienceBook] << endl;*/
+ /*    l.AddBook(scienceBook, 2);
+     l.AddBook(scienceBook1, 1);
+     l.AddBook(socialBook, 6);
+     l.AddBook(socialBook1, 7);
+     l.AddBook(foreignBook,5);
+     l.AddBook(foreignBook1, 8);
+
+     cout << l._stock[scienceBook] << endl;
+     cout << l._stock[scienceBook1] << endl;
+     cout << l._stock[socialBook] << endl;
+     cout << l._stock[socialBook1] << endl;
+     cout << l._stock[foreignBook] << endl;
+     cout << l._stock[foreignBook1] << endl;*/
 
 
 
