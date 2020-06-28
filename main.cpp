@@ -31,12 +31,19 @@ int main()
 
     User u("001","123456", 0);
     l._userList.insert(l._userList.end(), u);
-    cout << l.Register("002", "111111") << endl;
+ /*   cout << l.Register("002", "111111") << endl;
     l._userList.insert(l._userList.end(), l.Register("002", "111111"));
     cout << l.SignIn("002", "111111") << endl;
-    cout << l.SignIn("003", "123456") << endl;
+    cout << l.SignIn("003", "123456") << endl;*/
 
-
+    Log log("001", 2, 1);
+    l._logList.insert(l._logList.end(), log);
+    int size, i = 0;
+    size = l.QueryLog("001").size();
+    while (i < size) {
+        cout << l.QueryLog("001")[i].GetAccount() << " " << l.QueryLog("001")[i].GetBookNumber() << endl;//display lendtime + borrowtime 
+        i++;
+    }
 
    /* l.Lend("001", 2, 1);
     l.Return("001", 2, 1);

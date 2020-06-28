@@ -120,9 +120,9 @@ int Library::SignIn(string account, string password) {
             throw "PasswordIncorrectException";
         }
     }
-    throw "UserNotFoundException";//todo:bug
+    throw "UserNotFoundException";
 }
-//TODO:bug   'throw "PasswordIncorrectException";'
+//tested
 User Library::Register(string account, string password) {
     for (auto item : _userList) {
         if (item.GetAccount() == account ) {
@@ -142,7 +142,7 @@ vector<Log> Library::QueryLog(string account) {
     }
     return result;
 }
-
+//tested
 Library::~Library()
 {
 
