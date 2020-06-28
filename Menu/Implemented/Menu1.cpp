@@ -11,8 +11,7 @@
 
 using namespace std;
 
-void Menu1::Run()
-{
+void Menu1::Run(){
     cout << "要如何新增图书？" << endl;
     cout << "1 - 添加已有图书数量; 2 - 新增新的图书" << endl;
     int option; cin >> option;
