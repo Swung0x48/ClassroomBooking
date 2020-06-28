@@ -112,18 +112,21 @@ int main()
 // TODO: fix the SegFault (exit code 11)
 
     Vars::menuRouter.EnterMenu(-1);
-    Vars::menuRouter.EnterMenu(0);
 
 
-    int option;
-    cin >> option;
-    try
+    while (!Vars::cancellationToken)
     {
-        Vars::menuRouter.EnterMenu(option);
-    }
-    catch (const char * c)
-    {
-        cout << c;
+        try
+        {
+            Vars::menuRouter.EnterMenu(0);
+            int option;
+            cin >> option;
+            Vars::menuRouter.EnterMenu(option);
+        }
+        catch (const char *c)
+        {
+            cout << c;
+        }
     }
 
 

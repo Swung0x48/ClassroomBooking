@@ -12,6 +12,7 @@
 class Vars
 {
 public:
+    static bool cancellationToken;
     static string _currentUser;
     static Library library;
     static MenuRouter menuRouter;

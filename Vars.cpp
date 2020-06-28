@@ -10,7 +10,9 @@
 #include "Menu/Implemented/Menu3.h"
 
 #include "Menu/Implemented/Menu7.h"
+#include "Menu/Implemented/Menu8.h"
 
+bool Vars::cancellationToken = false;
 string Vars::_currentUser;
 Library Vars::library;
 MenuRouter Vars::menuRouter;
@@ -24,6 +26,8 @@ Vars::Vars()
     menuRouter.RegisterMenu(new Menu3);
 
     menuRouter.RegisterMenu(new Menu7);
+    menuRouter.RegisterMenu(new Menu8);
+
 }
 
 Vars::~Vars()

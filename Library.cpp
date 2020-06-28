@@ -148,7 +148,7 @@ void Library::ShowAllBooks()
     for (auto i: _stock)
     {
         i.first->ShowMe();
-        cout << i.second << endl;
+        cout << "数量： " << i.second << endl;
         cout << endl;
     }
 }
