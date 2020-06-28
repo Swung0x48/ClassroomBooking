@@ -11,7 +11,15 @@ using namespace std;
 //ADMIN
 void Library::AddBook(Book* book, int quantity)//addquantity
 {
-    _stock[book] += quantity;
+    try
+    {
+        Book *pBook = Search(book->GetNumber());
+        _stock[pBook] += quantity;
+    }
+    catch (const char* c)
+    {
+        _stock[book] += quantity;
+    }
 }
 //TODO: addbook(variety)
 int Library::Statistics(int type) {
@@ -45,7 +53,7 @@ void Library::Lend(string account, int number, int quantity)
                 throw "NotEnoughInStockException";
             }
             _stock[item.first] -= quantity;
-            _logList.push_back(Log(account, number, quantity));
+            _logList.emplace_back(account, number, quantity);
             return;
         }
     }

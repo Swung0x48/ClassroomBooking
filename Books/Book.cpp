@@ -27,7 +27,6 @@ Book::Book():
 
 istream& operator>> (istream& input, Book& b)
 {
-    b = Book();
     string str;
     getline(input, str);
     b.Deserialize(str);
@@ -92,21 +91,18 @@ string Book::Serialize()
 
 void Book::Deserialize(string rawStr) {
     istringstream ss(rawStr);
-    int type;
     int number;
     string name;
     double price;
     string author;
     string pubHouse;
 
-    ss >> type
-       >> number
+    ss >> number
        >> quoted(name)
        >> price
        >> quoted(author)
        >> quoted(pubHouse);
 
-    _type = type;
     _number = number;
     _name = name;
     _price = price;

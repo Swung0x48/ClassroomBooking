@@ -53,13 +53,15 @@ int main()
     ForeignBook foreignBook(3, "BookNameF", 10.20, "AuthorName", "PubHouse", "lang");
 //    vars.library.AddBook(&scienceBook1, 2);
 //    vars.library.AddBook(&scienceBook, 4);
-//    vars.library.AddBook(dynamic_cast<Book *>(&foreignBook), 5);
 //    file.SaveAll(file.Open(File::StockPath, "wt"), vars.library._stock);
     file.LoadAll(file.Open(File::UserPath, "r"), Vars::library._userList);
     file.LoadAll(file.Open(File::StockPath, "r"), Vars::library._stock);
+
+    vars.library.AddBook(dynamic_cast<Book *>(&foreignBook), 5);
     for (auto i: Vars::library._stock)
     {
         i.first->ShowMe();
+        cout << i.second << endl;
         cout << endl;
     }
 // TODO: fix the SegFault (exit code 11)
@@ -72,7 +74,7 @@ int main()
     cin >> option;
     try
     {
-        vars.menuRouter.EnterMenu(option);
+        Vars::menuRouter.EnterMenu(option);
     }
     catch (const char * c)
     {

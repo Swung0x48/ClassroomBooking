@@ -46,7 +46,6 @@ ostream &operator<<(ostream &output, ForeignBook b) {
 void ForeignBook::Deserialize(string rawStr)
 {
     istringstream ss(rawStr);
-    int type;
     int number;
     string name;
     double price;
@@ -54,15 +53,13 @@ void ForeignBook::Deserialize(string rawStr)
     string pubHouse;
     string language;
 
-    ss >> type
-       >> number
+    ss >> number
        >> quoted(name)
        >> price
        >> quoted(author)
        >> quoted(pubHouse)
        >> quoted(language);
 
-    _type = type;
     _number = number;
     _name = name;
     _price = price;

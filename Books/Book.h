@@ -22,6 +22,7 @@ public:
     Book(int type, int number, string name, double price, string author, string pubHouse);
     Book();
 
+    virtual void SetType(int type) { _type = type; }
     virtual int GetType() { return _type; }
     int GetNumber() const { return _number; }
     string GetName() { return _name; };

@@ -9,6 +9,7 @@
 #include <fstream>
 #include <sstream>
 #include "../Books/Book.h"
+#include "../Books/ForeignBook.h"
 
 using namespace std;
 
@@ -86,8 +87,19 @@ public:
         while (getline(fs, str))
         {
             istringstream ss(str);
-            Book* first = new Book(); int second;
-            ss >> second >> *(first);
+            Book* first; int second, type;
+            ss >> second >> type;
+            if (type == 3)
+            {
+                first = new ForeignBook();
+
+            }
+            else
+            {
+                first = new Book();
+                first->SetType(type);
+            }
+            ss >> *(first);
             map[first] += second;   // TODO: Debug
         }
         fs.close();
