@@ -89,13 +89,13 @@ int main()
 
 /*    Vars vars;
     File file;
-    ForeignBook foreignBook(3, "BookNameF", 10.20, "AuthorName", "PubHouse", "lang");
-//    vars.library.AddBook(&scienceBook1, 2);
-//    vars.library.AddBook(&scienceBook, 4);
+//    Vars::library.AddBook(&scienceBook1, 2);
     file.LoadAll(file.Open(File::UserPath, "r"), Vars::library._userList);
     file.LoadAll(file.Open(File::StockPath, "r"), Vars::library._stock);
 
-    vars.library.AddBook(dynamic_cast<Book *>(&foreignBook), 5);
+    Vars::library.AddBook(&scienceBook, 4);
+    ForeignBook foreignBook(3, "BookNameF", 10.20, "AuthorName", "PubHouse", "lang");
+    Vars::library.AddBook(dynamic_cast<Book *>(&foreignBook), 5);
 
 
     for (auto i: Vars::library._stock)

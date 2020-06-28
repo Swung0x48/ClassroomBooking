@@ -32,7 +32,8 @@ int Library::Statistics(int type) {
         }
     }
     return sum;
-}   // tested
+}
+// tested
 void Library::ShowAllLogs()
 {
     for (auto item: _logList)
