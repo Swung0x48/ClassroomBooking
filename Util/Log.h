@@ -25,7 +25,7 @@ public:
 	void SetQuantity(int quantity) { _quantity = quantity; }
     int GetQuantity() { return _quantity; }
     void SetReturnTime() { _returnTime = Util::getTime(); }
-    void SetReturntime(time_t time) { _returnTime = time; }
+    void SetReturnTime(time_t time) { _returnTime = time; }
 
     friend ostream& operator<<(ostream& output, const Log& log);
 	friend istream& operator>>(istream& input, Log& log);

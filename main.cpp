@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include "Vars.h"
 #include "Books/ScienceBook.h"
 #include "Books/SocialBook.h"
@@ -16,8 +16,16 @@ int main()
     cin >> quoted(a) >> quoted(b);
     cout << quoted(a) << "/" << quoted(b);*/
 
-     ScienceBook scienceBook(1, "name", 20, "Tom", "A");
-     ScienceBook scienceBook1(2, "name2", 30, "Jack", "B");
+    //Test:Addbookquantity
+ /*   Library l;
+    ScienceBook* scienceBook = new ScienceBook(1, "name", 20, "Tom", "A");
+    ScienceBook* scienceBook1 = new ScienceBook(2, "name2", 30, "Jack", "B");
+    l._stock[scienceBook] = 3;
+ //    Book *p = &scienceBook;
+     l.AddBook(scienceBook, 1);
+     cout << l._stock[scienceBook] << endl;*/
+
+
 //    SocialBook socialBook(2, "name", 20, "Tom", "A");
 
 
@@ -48,7 +56,7 @@ int main()
 //        cout << i;
 //    }
 
-    Vars vars;
+/*    Vars vars;
     File file;
     ForeignBook foreignBook(3, "BookNameF", 10.20, "AuthorName", "PubHouse", "lang");
 //    vars.library.AddBook(&scienceBook1, 2);
@@ -85,6 +93,6 @@ int main()
 
     cout << scienceBook.GetType() << endl;
     file.SaveAll(file.Open(File::StockPath, "wt"), Vars::library._stock);
-    file.SaveAll(file.Open(File::UserPath, "wt"), Vars::library._userList);
+    file.SaveAll(file.Open(File::UserPath, "wt"), Vars::library._userList);*/
     return 0;
 }

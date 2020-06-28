@@ -1,7 +1,4 @@
-//
-// Created by Swung 0x48 on 2020/6/27.
-//
-#include <iostream>
+﻿#include <iostream>
 #include "LoginMenu.h"
 #include "../../Vars.h"
 
