@@ -109,7 +109,7 @@ Book* Library::Search(int number)
     }
     throw "BookNotFoundException";
 }
-
+//tested
 int Library::SignIn(string account, string password) {
     for (auto item : _userList) {
         if (item.GetAccount() == account && item.GetPassword() == password) {
