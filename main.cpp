@@ -15,15 +15,31 @@ int main()
 /*    string a, b;
     cin >> quoted(a) >> quoted(b);
     cout << quoted(a) << "/" << quoted(b);*/
+    Library l;
+    ScienceBook* scienceBook = new ScienceBook(1, "name", 10, "Tom", "A");
+    ScienceBook* scienceBook1 = new ScienceBook(2, "name2", 20, "Jack", "B");
+    SocialBook* socialBook = new SocialBook(3, "name3", 30, "Sue", "C");
+    SocialBook* socialBook1= new SocialBook(4, "name4", 40, "Jhon", "D");
+    ForeignBook* foreignBook = new ForeignBook(5, "name5", 50, "Alice", "E","English");
+    ForeignBook* foreignBook1 = new ForeignBook(6, "name6", 60, "Canthy", "F","Russian");
+    l._stock[scienceBook] = 1;
+    l._stock[scienceBook1] = 2;
+    l._stock[socialBook] = 3;
+    l._stock[socialBook1] = 4;
+    l._stock[foreignBook] = 5;
+    l._stock[foreignBook1] = 6;
+
+    //Test:Statistics
+ /*   cout << l.Statistics(1) << endl;
+    cout << l.Statistics(2) << endl;
+    cout << l.Statistics(3) << endl;*/
 
     //Test:Addbookquantity
- /*   Library l;
-    ScienceBook* scienceBook = new ScienceBook(1, "name", 20, "Tom", "A");
-    ScienceBook* scienceBook1 = new ScienceBook(2, "name2", 30, "Jack", "B");
-    l._stock[scienceBook] = 3;
+ /*   
  //    Book *p = &scienceBook;
      l.AddBook(scienceBook, 1);
      cout << l._stock[scienceBook] << endl;*/
+
 
 
 //    SocialBook socialBook(2, "name", 20, "Tom", "A");
