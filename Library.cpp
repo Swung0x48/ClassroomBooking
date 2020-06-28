@@ -21,7 +21,7 @@ void Library::AddBook(Book* book, int quantity)//addquantity
         _stock[book] += quantity;
     }
 }
-//TODO: addbook(variety)
+// tested
 int Library::Statistics(int type) {
     int sum=0;
     for (auto item : _stock)
@@ -32,7 +32,7 @@ int Library::Statistics(int type) {
         }
     }
     return sum;
-}
+}   // tested
 void Library::ShowAllLogs()
 {
     for (auto item: _logList)
@@ -57,8 +57,8 @@ void Library::Lend(string account, int number, int quantity)
             return;
         }
     }
-
 }
+
 void Library::Return(string account, int number, int quantity)
 {
 //    for (auto item : _stock)
