@@ -9,9 +9,9 @@
 using namespace std;
 
 void Menu3::Run() {
-	cout << "————归还图书————" << endl;
+	cout << "——————归还图书——————" << endl;
 	cout << endl;
-	cout << "请输入借阅人姓名："；
+	cout << "请输入借阅人姓名：";
 		fflush(stdin);
 	string name; getline(cin, name);
 	cout << "请输入归还图书的编号：";
