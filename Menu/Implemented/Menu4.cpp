@@ -17,18 +17,18 @@ void Menu4::Run() {
 	try {
 		Vars::library.Search(id);
 		cout << "图书编号："
-			<< Vars::library.Search(id)->GetNumber()
-			<< "     书名："
-			<< Vars::library.Search(id)->GetName()
-			<< "     作者："
-			<< Vars::library.Search(id)->GetAuthor()
-			<< "     价格："
-			<< Vars::library.Search(id)->GetPrice()
-			<< "     出版社："
-			<< Vars::library.Search(id)->GetPubHouse();
+			<< Vars::library.Search(id)->GetNumber() << endl
+			<< "书名："
+			<< Vars::library.Search(id)->GetName() << endl
+			<< "作者："
+			<< Vars::library.Search(id)->GetAuthor() << endl
+			<< "价格："
+			<< Vars::library.Search(id)->GetPrice() << endl
+			<< "出版社："
+			<< Vars::library.Search(id)->GetPubHouse() << endl;
 		cout << endl;
 		cout << "库存："
-			<< Vars::library._stock[Vars::library, Vars::library.Search(id)];
+			<< Vars::library._stock[Vars::library.Search(id)] << endl;
 	}
 	catch (const char* c) {
 		if (string(c) == string("BookNotFoundException")) {
