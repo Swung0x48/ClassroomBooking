@@ -33,7 +33,6 @@ istream& operator>> (istream& input, Book& b)
 
     return input;
 //    int type;
-//    // TODO: check type
 //    int number;
 //    string name;
 //    double price;
@@ -49,7 +48,7 @@ istream& operator>> (istream& input, Book& b)
 //
 //    b._type = type;
 //    b._number = number;
-//    b._name = name;
+//    b._borrower = name;
 //    b._price = price;
 //    b._author = author;
 //    b._pubHouse = pubHouse;
@@ -65,7 +64,7 @@ ostream& operator<< (ostream& output, Book& b)
 //        << " "
 //        << b._number
 //        << " "
-//        << quoted(b._name)
+//        << quoted(b._borrower)
 //        << " "
 //        << b._price
 //        << " "

@@ -15,35 +15,35 @@ int main()
 /*    string a, b;
     cin >> quoted(a) >> quoted(b);
     cout << quoted(a) << "/" << quoted(b);*/
-    Library l;
-    ScienceBook* scienceBook = new ScienceBook(1, "name", 10, "Tom", "A");
-    ScienceBook* scienceBook1 = new ScienceBook(2, "name2", 20, "Jack", "B");
-    SocialBook* socialBook = new SocialBook(3, "name3", 30, "Sue", "C");
-    SocialBook* socialBook1= new SocialBook(4, "name4", 40, "Jhon", "D");
-    ForeignBook* foreignBook = new ForeignBook(5, "name5", 50, "Alice", "E","English");
-    ForeignBook* foreignBook1 = new ForeignBook(6, "name6", 60, "Canthy", "F","Russian");
-    l._stock[scienceBook] = 1;
-    l._stock[scienceBook1] = 2;
-    l._stock[socialBook] = 3;
-    l._stock[socialBook1] = 4;
-    l._stock[foreignBook] = 5;
-    l._stock[foreignBook1] = 6;
-
-    User u("001","123456", 0);
-    l._userList.insert(l._userList.end(), u);
+//    Library l;
+//    ScienceBook* scienceBook = new ScienceBook(1, "name", 10, "Tom", "A");
+//    ScienceBook* scienceBook1 = new ScienceBook(2, "name2", 20, "Jack", "B");
+//    SocialBook* socialBook = new SocialBook(3, "name3", 30, "Sue", "C");
+//    SocialBook* socialBook1= new SocialBook(4, "name4", 40, "Jhon", "D");
+//    ForeignBook* foreignBook = new ForeignBook(5, "name5", 50, "Alice", "E","English");
+//    ForeignBook* foreignBook1 = new ForeignBook(6, "name6", 60, "Canthy", "F","Russian");
+//    l._stock[scienceBook] = 1;
+//    l._stock[scienceBook1] = 2;
+//    l._stock[socialBook] = 3;
+//    l._stock[socialBook1] = 4;
+//    l._stock[foreignBook] = 5;
+//    l._stock[foreignBook1] = 6;
+//
+//    User u("001","123456", 0);
+//    l._userList.insert(l._userList.end(), u);
  /*   cout << l.Register("002", "111111") << endl;
     l._userList.insert(l._userList.end(), l.Register("002", "111111"));
     cout << l.SignIn("002", "111111") << endl;
     cout << l.SignIn("003", "123456") << endl;*/
 
-    Log log("001", 2, 1);
-    l._logList.insert(l._logList.end(), log);
-    int size, i = 0;
-    size = l.QueryLog("001").size();
-    while (i < size) {
-        cout << l.QueryLog("001")[i].GetAccount() << " " << l.QueryLog("001")[i].GetBookNumber() << endl;//display lendtime + borrowtime 
-        i++;
-    }
+//    Log log("001", 2, 1);
+//    l._logList.insert(l._logList.end(), log);
+//    int size, i = 0;
+//    size = l.QueryLog("001").size();
+//    while (i < size) {
+//        cout << l.QueryLog("001")[i].GetBorrower() << " " << l.QueryLog("001")[i].GetBookNumber() << endl;//display lendtime + borrowtime
+//        i++;
+//    }
 
    /* l.Lend("001", 2, 1);
     l.Return("001", 2, 1);
@@ -82,12 +82,12 @@ int main()
 //    file.Open(File::BookPath, "r") >> scienceBook1 >> scienceBook1 >> scienceBook;
 //    file.Close();
 
-    /* cout << scienceBook << endl;
-     cout << scienceBook.GetName() << endl;
-
-     Library library;
-     library.AddBook(&scienceBook, 1);
-     library.AddBook(&scienceBook1, 2);*/
+//     cout << scienceBook << endl;
+//     cout << scienceBook.GetName() << endl;
+//
+//     Library library;
+//     library.AddBook(&scienceBook, 1);
+//     library.AddBook(&scienceBook1, 2);
 
 
 //    vector<Book> vec;
@@ -101,15 +101,11 @@ int main()
 //        cout << i;
 //    }
 
-/*    Vars vars;
+    Vars vars;
     File file;
 //    Vars::library.AddBook(&scienceBook1, 2);
     file.LoadAll(file.Open(File::UserPath, "r"), Vars::library._userList);
     file.LoadAll(file.Open(File::StockPath, "r"), Vars::library._stock);
-
-    Vars::library.AddBook(&scienceBook, 4);
-    ForeignBook foreignBook(3, "BookNameF", 10.20, "AuthorName", "PubHouse", "lang");
-    Vars::library.AddBook(dynamic_cast<Book *>(&foreignBook), 5);
 
 
     for (auto i: Vars::library._stock)
@@ -136,8 +132,7 @@ int main()
     }
 
 
-    cout << scienceBook.GetType() << endl;
     file.SaveAll(file.Open(File::StockPath, "wt"), Vars::library._stock);
-    file.SaveAll(file.Open(File::UserPath, "wt"), Vars::library._userList);*/
+    file.SaveAll(file.Open(File::UserPath, "wt"), Vars::library._userList);
     return 0;
 }

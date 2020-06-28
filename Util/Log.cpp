@@ -3,7 +3,7 @@
 #include "Util.h"
 
 ostream &operator<<(ostream &output, const Log &log) {
-    return output << quoted(log._account)
+    return output << quoted(log._borrower)
                   << " "
                   << log._bookNumber
                   << " "
@@ -13,16 +13,16 @@ ostream &operator<<(ostream &output, const Log &log) {
 }
 
 istream &operator>>(istream &input, Log &log) {
-    return input >> quoted(log._account)
+    return input >> quoted(log._borrower)
                  >> log._bookNumber
                  >> log._borrowTime
                  >> log._returnTime;
 }
 
-Log::Log(string account, int bookNumber, int quantity)
-:   _account(account),
-    _bookNumber(bookNumber),
-    _quantity(quantity),
-    _borrowTime(Util::getTime()),
-    _returnTime(0)
+Log::Log(string borrower, int bookNumber, int quantity)
+: _borrower(borrower),
+  _bookNumber(bookNumber),
+  _quantity(quantity),
+  _borrowTime(Util::getTime()),
+  _returnTime(0)
 {}

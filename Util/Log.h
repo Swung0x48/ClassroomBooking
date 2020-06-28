@@ -10,17 +10,17 @@ using namespace std;
 
 class Log {
 private:
-	string _account;
+	string _borrower;
 	int _bookNumber;
 	int _quantity;
 	time_t _borrowTime;
 	time_t _returnTime;
 
 public:
-    Log(string account, int bookNumber, int quantity);
-    void SetAccount( string account ) { _account = account; }
+    Log(string borrower, int bookNumber, int quantity);
+    void SetAccount( string borrower ) { _borrower = borrower; }
 	void SetBookNumber(int bookNumber) { _bookNumber = bookNumber; }
-	string GetAccount() { return _account; }
+	string GetBorrower() { return _borrower; }
 	int GetBookNumber() { return _bookNumber; }
 	void SetQuantity(int quantity) { _quantity = quantity; }
     int GetQuantity() { return _quantity; }

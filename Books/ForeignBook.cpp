@@ -34,13 +34,11 @@ istream &operator>>(istream &input, ForeignBook &b)
     b.Deserialize(str);
 
     return input;
-    // TODO: Test & debug
 }
 
 ostream &operator<<(ostream &output, ForeignBook b) {
     output << b.Serialize();
     return output;
-    // TODO: Test & debug
 }
 
 void ForeignBook::Deserialize(string rawStr)

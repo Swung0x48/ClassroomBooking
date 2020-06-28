@@ -36,14 +36,14 @@ int Library::Statistics(int type) {
 // tested
 void Library::ShowAllLogs()
 {
-    for (auto item: _logList)
+    for (const auto& item: _logList)
     {
         cout << item << endl;
     }
 }
 
 //USER
-void Library::Lend(string account, int number, int quantity)
+void Library::Lend(string borrower, int number, int quantity)
 {
     for (auto item : _stock)
     {
@@ -54,13 +54,13 @@ void Library::Lend(string account, int number, int quantity)
                 throw "NotEnoughInStockException";
             }
             _stock[item.first] -= quantity;
-            _logList.emplace_back(account, number, quantity);
+            _logList.emplace_back(borrower, number, quantity);
             return;
         }
     }
 }
 //TODO: borrowtime
-void Library::Return(string account, int number, int quantity)
+void Library::Return(string borrower, int number, int quantity)
 {
 //    for (auto item : _stock)
 //    {
@@ -68,14 +68,13 @@ void Library::Return(string account, int number, int quantity)
 //            _stock[item.first] += quantity;
 //        }
 //    }
-//                TODO
     try
     {
         Book* book = Search(number);
 
         for (auto item: _logList)
         {
-            if (item.GetAccount() == account)
+            if (item.GetBorrower() == borrower)
             {
                 if (item.GetBookNumber() == number)
                 {
@@ -136,7 +135,7 @@ User Library::Register(string account, string password) {
 vector<Log> Library::QueryLog(string account) {
     vector<Log> result;
     for (auto item : _logList) {
-        if (item.GetAccount() == account) {
+        if (item.GetBorrower() == account) {
             result.push_back(item);
         }
     }

@@ -32,7 +32,6 @@ public:
     virtual void ShowMe();
     friend istream& operator>> (istream& input, Book& b);
     friend ostream& operator<< (ostream& output, Book& b);
-    // TODO: Add virtual function delegate.
 
     bool operator<(const Book& rhs) const
     {

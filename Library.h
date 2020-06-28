@@ -33,8 +33,8 @@ public:
 	void ShowAllLogs();
 
 	//USER
-	void Lend(string account, int number, int quantity);
-	void Return(string account, int number, int quantity);
+	void Lend(string borrower, int number, int quantity);
+	void Return(string borrower, int number, int quantity);
 	Book* Search(int number);
 	User Register(string account, string password);
     int SignIn(string account, string password);
