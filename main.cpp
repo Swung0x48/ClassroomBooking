@@ -108,12 +108,7 @@ int main()
     file.LoadAll(file.Open(File::StockPath, "r"), Vars::library._stock);
 
 
-    for (auto i: Vars::library._stock)
-    {
-        i.first->ShowMe();
-        cout << i.second << endl;
-        cout << endl;
-    }
+
 // TODO: fix the SegFault (exit code 11)
 
     Vars::menuRouter.EnterMenu(-1);

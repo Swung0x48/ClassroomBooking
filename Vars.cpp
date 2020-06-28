@@ -9,6 +9,8 @@
 #include "Menu/Implemented/Menu2.h"
 #include "Menu/Implemented/Menu3.h"
 
+#include "Menu/Implemented/Menu7.h"
+
 string Vars::_currentUser;
 Library Vars::library;
 MenuRouter Vars::menuRouter;
@@ -20,6 +22,8 @@ Vars::Vars()
     menuRouter.RegisterMenu(new Menu1);
     menuRouter.RegisterMenu(new Menu2);
     menuRouter.RegisterMenu(new Menu3);
+
+    menuRouter.RegisterMenu(new Menu7);
 }
 
 Vars::~Vars()
