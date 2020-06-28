@@ -20,4 +20,26 @@ void Menu5::Run() {
 	int opt;
 	cin >> opt;
 
+	try {
+		Vars::library.Statistics(opt);
+		if (opt == 1) {
+			cout << "自然科学类图书有：";
+		}
+		else if (opt == 2) {
+			cout << "人文社科类图书有：";
+		}
+		else if (opt == 3) {
+			cout << "外文类图书有：";
+		}
+		cout << Vars::library.Statistics(opt) << "本" << endl;
+	}
+	catch (const char* c) {
+		if (string(c) == string("TypeNotFoundException")) {
+			cout << "无此图书类型！" << endl;
+		}
+		else {
+			cout << c << endl;
+		}
+	}
+
 }

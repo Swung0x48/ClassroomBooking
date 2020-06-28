@@ -24,14 +24,19 @@ void Library::AddBook(Book* book, int quantity)//addquantity
 // tested
 int Library::Statistics(int type) {
     int sum=0;
-    for (auto item : _stock)
-    {
-        if (item.first->GetType() == type)
+    if (type == 1 || type == 2 || type == 3) {
+        for (auto item : _stock)
         {
-            sum += item.second;
+            if (item.first->GetType() == type)
+            {
+                sum += item.second;
+            }
         }
+        return sum;
     }
-    return sum;
+    else {
+        throw "TypeNotFoundException";
+    }
 }
 // tested
 void Library::ShowAllLogs()
