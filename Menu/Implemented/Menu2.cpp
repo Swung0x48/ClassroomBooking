@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include "Menu2.h"
 #include "../../Books/Book.h"
 #include "../../Vars.h"
@@ -9,25 +9,25 @@
 using namespace std;
 
 void Menu2::Run() {
-	cout << "¡ª¡ª¡ª¡ªÍâ½èÍ¼Êé¡ª¡ª¡ª¡ª" << endl;
+	cout << "â€”â€”â€”â€”å¤–å€Ÿå›¾ä¹¦â€”â€”â€”â€”" << endl;
 	cout << endl;
-	cout << "ÇëÊäÈë½èÔÄÈËÐÕÃû£º"£»
+	cout << "è¯·è¾“å…¥å€Ÿé˜…äººå§“åï¼š"ï¼›
 	fflush(stdin);
 	string name; getline(cin, name);
-	cout << "ÇëÊäÈëÍâ½èÍ¼ÊéµÄ±àºÅ£º";
+	cout << "è¯·è¾“å…¥å¤–å€Ÿå›¾ä¹¦çš„ç¼–å·ï¼š";
 	int id;
 	cin >> id;
-	cout << "ÇëÊäÈëÍâ½èÍ¼ÊéµÄÊýÁ¿£º";
+	cout << "è¯·è¾“å…¥å¤–å€Ÿå›¾ä¹¦çš„æ•°é‡ï¼š";
 	int quantity;
 	cin >> quantity;
 	
     try{
         Vars::library.Lend(name, id, quantity);
-		cout << "½èÔÄ³É¹¦£¡" << endl;
+		cout << "å€Ÿé˜…æˆåŠŸï¼" << endl;
     }
     catch (const char* c){
         if (string(c) == string("NotEnoughInStockException")){
-            cout << "´ËÍ¼ÊéÔÝÎÞ¿â´æ£¡" << endl;
+            cout << "æ­¤å›¾ä¹¦æš‚æ— åº“å­˜ï¼" << endl;
         }
         else {
             cout << c << endl;

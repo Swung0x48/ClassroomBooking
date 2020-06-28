@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include "Menu3.h"
 #include "../../Books/Book.h"
 #include "../../Vars.h"
@@ -9,21 +9,21 @@
 using namespace std;
 
 void Menu3::Run() {
-	cout << "¡ª¡ª¡ª¡ª¹é»¹Í¼Êé¡ª¡ª¡ª¡ª" << endl;
+	cout << "â€”â€”â€”â€”å½’è¿˜å›¾ä¹¦â€”â€”â€”â€”" << endl;
 	cout << endl;
-	cout << "ÇëÊäÈë½èÔÄÈËÐÕÃû£º"£»
+	cout << "è¯·è¾“å…¥å€Ÿé˜…äººå§“åï¼š"ï¼›
 		fflush(stdin);
 	string name; getline(cin, name);
-	cout << "ÇëÊäÈë¹é»¹Í¼ÊéµÄ±àºÅ£º";
+	cout << "è¯·è¾“å…¥å½’è¿˜å›¾ä¹¦çš„ç¼–å·ï¼š";
 	int id;
 	cin >> id;
-	cout << "ÇëÊäÈë¹é»¹Í¼ÊéµÄÊýÁ¿£º";
+	cout << "è¯·è¾“å…¥å½’è¿˜å›¾ä¹¦çš„æ•°é‡ï¼š";
 	int quantity;
 	cin >> quantity;
 
 	try {
 		Vars::library.Return(name, id, quantity);
-		cout << "¹é»¹³É¹¦£¡" << endl;
+		cout << "å½’è¿˜æˆåŠŸï¼" << endl;
 	}
 	catch (const char* c) {
 			cout << c << endl;
