@@ -29,9 +29,14 @@ int main()
     l._stock[foreignBook] = 5;
     l._stock[foreignBook1] = 6;
 
-    User u("001"," 123456", 0);
+    User u("001","123456", 0);
+    l._userList.insert(l._userList.end(), u);
     cout << l.Register("002", "111111") << endl;
-    //   l._userList.insert(l._userList.end(), u);
+    l._userList.insert(l._userList.end(), l.Register("002", "111111"));
+    cout << l.SignIn("002", "111111") << endl;
+    cout << l.SignIn("003", "123456") << endl;
+
+
 
    /* l.Lend("001", 2, 1);
     l.Return("001", 2, 1);

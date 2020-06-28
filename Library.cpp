@@ -59,7 +59,7 @@ void Library::Lend(string account, int number, int quantity)
         }
     }
 }
-
+//TODO: borrowtime
 void Library::Return(string account, int number, int quantity)
 {
 //    for (auto item : _stock)
@@ -98,6 +98,7 @@ void Library::Return(string account, int number, int quantity)
         throw c;
     }
 }
+//TODO:returntime
 Book* Library::Search(int number)
 {
     for (auto item : _stock)
@@ -119,8 +120,9 @@ int Library::SignIn(string account, string password) {
             throw "PasswordIncorrectException";
         }
     }
-    throw "UserNotFoundException";
+    throw "UserNotFoundException";//todo:bug
 }
+//TODO:bug   'throw "PasswordIncorrectException";'
 User Library::Register(string account, string password) {
     for (auto item : _userList) {
         if (item.GetAccount() == account ) {
@@ -130,6 +132,7 @@ User Library::Register(string account, string password) {
     User u(account, password, 1);
     return u;
 }
+//tested
 vector<Log> Library::QueryLog(string account) {
     vector<Log> result;
     for (auto item : _logList) {
