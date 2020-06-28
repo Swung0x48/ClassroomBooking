@@ -31,8 +31,9 @@ int main()
 
     User u("001"," 123456", 0);
 
- /*   l.Lend("001", 2, 1);
-    l.ShowAllLogs();*/  //Error:borrowtime
+   /* l.Lend("001", 2, 1);
+    l.Return("001", 2, 1);
+    l.ShowAllLogs();  //Error:borrowtime  returntime*/
 
     //Test:Statistics
  /*   cout << l.Statistics(1) << endl;
