@@ -106,7 +106,7 @@ int main()
 //    Vars::library.AddBook(&scienceBook1, 2);
     file.LoadAll(file.Open(File::UserPath, "r"), Vars::library._userList);
     file.LoadAll(file.Open(File::StockPath, "r"), Vars::library._stock);
-
+    file.LoadAll(file.Open(File::LogPath, "r"), Vars::library._logList);
 
 
 // TODO: fix the SegFault (exit code 11)
@@ -132,5 +132,6 @@ int main()
 
     file.SaveAll(file.Open(File::StockPath, "wt"), Vars::library._stock);
     file.SaveAll(file.Open(File::UserPath, "wt"), Vars::library._userList);
+    file.SaveAll(file.Open(File::LogPath, "wt"), Vars::library._logList);
     return 0;
 }

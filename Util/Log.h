@@ -17,6 +17,7 @@ private:
 	time_t _returnTime;
 
 public:
+    Log();
     Log(string borrower, int bookNumber, int quantity);
     void SetAccount( string borrower ) { _borrower = borrower; }
 	void SetBookNumber(int bookNumber) { _bookNumber = bookNumber; }
@@ -24,8 +25,10 @@ public:
 	int GetBookNumber() { return _bookNumber; }
 	void SetQuantity(int quantity) { _quantity = quantity; }
     int GetQuantity() { return _quantity; }
+    time_t GetBorrowTime() { return _borrowTime; }
     void SetReturnTime() { _returnTime = Util::getTime(); }
     void SetReturnTime(time_t time) { _returnTime = time; }
+    time_t GetReturnTime() { return _returnTime; }
 
     friend ostream& operator<<(ostream& output, const Log& log);
 	friend istream& operator>>(istream& input, Log& log);

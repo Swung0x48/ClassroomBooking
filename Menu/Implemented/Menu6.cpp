@@ -18,14 +18,24 @@ void Menu6::Run() {
 	try {
 		Vars::library.QueryLog(name);
 		int size,i=0;
-		cout << Vars::library.QueryLog(name)[i].GetBorrower() << "的历史借阅信息如下：" << endl;
+		cout << name << "的历史借阅信息如下：" << endl;
 		cout << endl;
 		size = Vars::library.QueryLog(name).size();
 		while (i < size) {
-			cout << "图书编号："
-				<< Vars::library.QueryLog(name)[i].GetBookNumber()
-			    << "数量："
-				<< Vars::library.QueryLog(name)[i].GetQuantity();
+		    Vars::library.Search(Vars::library.QueryLog(name)[i].GetBookNumber())->ShowMe();
+			cout << "数量："
+				<< Vars::library.QueryLog(name)[i].GetQuantity() << endl
+			    << "借阅时间："
+			    << Util::formatTime(Vars::library.QueryLog(name)[i].GetBorrowTime()) << endl;
+			if (Vars::library.QueryLog(name)[i].GetReturnTime() >= Vars::library.QueryLog(name)[i].GetBorrowTime())
+            {
+			    cout << "归还时间：" << endl
+			    << Util::formatTime(Vars::library.QueryLog(name)[i].GetReturnTime()) << endl;
+            }
+			else
+            {
+			    cout << "暂未归还" << endl;
+            }
 			i++;
 		}
 	}
