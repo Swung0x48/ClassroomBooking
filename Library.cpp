@@ -84,6 +84,7 @@ void Library::Return(string borrower, int number, int quantity)
                 {
                     _stock[book] += quantity;
                     item.SetQuantity(item.GetQuantity() - quantity);
+                    item.SetReturnTime();
                     return;
                 }
             }
