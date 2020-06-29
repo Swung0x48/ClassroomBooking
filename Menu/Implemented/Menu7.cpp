@@ -8,4 +8,6 @@
 void Menu7::Run()
 {
     Vars::library.ShowAllBooks();
+    fflush(stdin);
+    getchar();
 }

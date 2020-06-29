@@ -31,10 +31,14 @@ void Menu6::Run() {
             {
 			    cout << "归还时间：" << endl
 			    << Util::formatTime(Vars::library.QueryLog(name)[i].GetReturnTime()) << endl;
+			    fflush(stdin);
+			    getchar();
             }
 			else
             {
 			    cout << "暂未归还" << endl;
+			    fflush(stdin);
+			    getchar();
             }
 			i++;
 		}

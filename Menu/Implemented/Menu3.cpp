@@ -24,8 +24,12 @@ void Menu3::Run() {
 	try {
 		Vars::library.Return(name, id, quantity);
 		cout << "归还成功！" << endl;
+		fflush(stdin);
+		getchar();
 	}
 	catch (const char* c) {
 			cout << c << endl;
+			fflush(stdin);
+			getchar();
 	}
 }

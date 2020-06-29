@@ -76,5 +76,7 @@ void Menu1::Run(){
         int quantity; cin >> quantity;
         Vars::library.AddBook(book, quantity);
         cout << "添加完成" << endl;
+        fflush(stdin);
+        getchar();
     }
 }

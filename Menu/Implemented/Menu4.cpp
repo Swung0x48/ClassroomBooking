@@ -29,13 +29,17 @@ void Menu4::Run() {
 		cout << endl;
 		cout << "库存："
 			<< Vars::library._stock[Vars::library.Search(id)] << endl;
+		fflush(stdin);
+		getchar();
 	}
 	catch (const char* c) {
 		if (string(c) == string("BookNotFoundException")) {
 			cout << "暂无此图书信息！" << endl;
+			getchar();
 		}
 		else {
 			cout << c << endl;
+			getchar();
 		}
 	}
 }

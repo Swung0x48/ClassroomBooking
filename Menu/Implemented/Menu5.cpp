@@ -32,10 +32,14 @@ void Menu5::Run() {
 			cout << "外文类图书有：";
 		}
 		cout << Vars::library.Statistics(opt) << "本" << endl;
+		fflush(stdin);
+		getchar();
 	}
 	catch (const char* c) {
 		if (string(c) == string("TypeNotFoundException")) {
 			cout << "无此图书类型！" << endl;
+			fflush(stdin);
+			getchar();
 		}
 		else {
 			cout << c << endl;

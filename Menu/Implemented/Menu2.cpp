@@ -24,13 +24,17 @@ void Menu2::Run() {
     try{
         Vars::library.Lend(name, id, quantity);
 		cout << "借阅成功！" << endl;
+		getchar();
     }
     catch (const char* c){
         if (string(c) == string("NotEnoughInStockException")){
             cout << "此图书暂无库存！" << endl;
+            getchar();
         }
         else {
             cout << c << endl;
+            fflush(stdin);
+            getchar();
         }
     }
 }

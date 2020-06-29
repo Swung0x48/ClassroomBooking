@@ -77,7 +77,7 @@ void Library::Return(string borrower, int number, int quantity)
     {
         Book* book = Search(number);
 
-        for (auto item: _logList)
+        for (auto& item: _logList)
         {
             if (item.GetBorrower() == borrower)
             {
@@ -85,17 +85,11 @@ void Library::Return(string borrower, int number, int quantity)
                 {
                     _stock[book] += quantity;
                     item.SetQuantity(item.GetQuantity() - quantity);
+                    return;
                 }
-                else
-                {
-                    continue;
-                }
-            }
-            else
-            {
-                continue;
             }
         }
+        throw "ReturnFailedException";
     }
     catch (const char * c)
     {
