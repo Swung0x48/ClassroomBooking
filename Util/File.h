@@ -35,7 +35,7 @@ public:
     {
         for (auto i: vec)
         {
-            fs << i;
+            fs << i << endl;
         }
         fs.close();
     }
