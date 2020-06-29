@@ -64,7 +64,6 @@ void Library::Lend(string borrower, int number, int quantity)
         }
     }
 }
-//TODO: borrowtime
 void Library::Return(string borrower, int number, int quantity)
 {
 //    for (auto item : _stock)
@@ -96,7 +95,6 @@ void Library::Return(string borrower, int number, int quantity)
         throw c;
     }
 }
-//TODO:returntime
 Book* Library::Search(int number)
 {
     for (auto item : _stock)

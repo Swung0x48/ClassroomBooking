@@ -76,7 +76,7 @@ public:
 //            istringstream ss(str);
 //            T1 first; T2 second;
 //            ss >> second >> *(first);
-//            map[first] += second;   // TODO: Debug
+//            map[first] += second;
 //        }
 //        fs.close();
 //    }
@@ -100,12 +100,10 @@ public:
                 first->SetType(type);
             }
             ss >> *(first);
-            map[first] += second;   // TODO: Debug
+            map[first] += second;
         }
         fs.close();
     }
-// TODO: Check for Language book.
-
 };
 
 
