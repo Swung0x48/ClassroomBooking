@@ -17,6 +17,7 @@ int main()
         try
         {
             Vars::menuRouter.EnterMenu(0);
+            fflush(stdin);
             int option;
             cin >> option;
             Vars::menuRouter.EnterMenu(option);
