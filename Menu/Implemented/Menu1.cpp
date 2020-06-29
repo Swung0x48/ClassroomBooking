@@ -42,14 +42,14 @@ void Menu1::Run(){
 
         Book *book;
         if (type == 1)
-            book = new SocialBook(
+            book = new ScienceBook(
                     Util::getRandom(),
                     name,
                     price,
                     author,
                     pubHouse);
         else if (type == 2)
-            book = new ScienceBook(
+            book = new SocialBook(
                     Util::getRandom(),
                     name,
                     price,
