@@ -25,9 +25,8 @@ void Menu4::Run() {
 			<< "价格："
 			<< Vars::library.Search(id)->GetPrice() << endl
 			<< "出版社："
-			<< Vars::library.Search(id)->GetPubHouse() << endl;
-		cout << endl;
-		cout << "库存："
+			<< Vars::library.Search(id)->GetPubHouse() << endl
+		    << "库存："
 			<< Vars::library._stock[Vars::library.Search(id)] << endl;
 		fflush(stdin);
 		getchar();
