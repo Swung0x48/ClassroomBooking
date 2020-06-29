@@ -20,6 +20,7 @@ void LoginMenu::Run()
         if (string(c) == string("PasswordIncorrectException"))
         {
             cout << "密码错误。将退出系统。" << endl;
+            exit(0);
         }
         else if (string(c) == string("UserNotFoundException"))
         {
